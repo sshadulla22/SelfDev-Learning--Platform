@@ -32,7 +32,7 @@
   display: grid;
   grid-template-columns: 20px 1fr; /* icon + text */
   align-items: center;
-  border-right: 1px dashed #0f0;
+  border: 1px dashed #0f0;
   padding: 6px 10px;
   color: #e0e0e0;
   text-decoration: none;
