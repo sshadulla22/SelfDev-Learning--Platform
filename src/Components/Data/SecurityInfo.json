@@ -1,0 +1,47 @@
+[
+  {
+    "id": 1,
+    "title": "Introduction to Security",
+    "content": "Security in software protects applications from threats, attacks, and unauthorized access.",
+    "questions": [
+      "What is application security?",
+      "Why is cybersecurity important?"
+    ]
+  },
+  {
+    "id": 2,
+    "title": "Authentication & Authorization",
+    "content": "Authentication verifies identity, while authorization controls access to resources.",
+    "questions": [
+      "Difference between authentication and authorization?",
+      "Name common authentication methods."
+    ]
+  },
+  {
+    "id": 3,
+    "title": "OWASP Top 10",
+    "content": "A list of the most critical security risks for web applications.",
+    "questions": [
+      "What is OWASP?",
+      "List 3 common web application vulnerabilities."
+    ]
+  },
+  {
+    "id": 4,
+    "title": "Data Encryption",
+    "content": "Encryption secures data by transforming it into unreadable text for unauthorized users.",
+    "questions": [
+      "Difference between symmetric and asymmetric encryption?",
+      "What is HTTPS?"
+    ]
+  },
+  {
+    "id": 5,
+    "title": "Security Best Practices",
+    "content": "Implement strong passwords, secure APIs, input validation, and regular vulnerability testing.",
+    "questions": [
+      "List some security best practices.",
+      "Why is input validation important?"
+    ]
+  }
+]

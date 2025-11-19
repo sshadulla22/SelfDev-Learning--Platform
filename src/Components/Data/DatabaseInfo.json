@@ -1,0 +1,23 @@
+[
+  {
+    "id": 1,
+    "title": "Introduction to Databases",
+    "content": "Databases are organized collections of data. Common types include relational (SQL) and non-relational (NoSQL) databases.",
+    "questions": [
+      "What is a database?",
+      "Difference between SQL and NoSQL databases?",
+      "Name some popular databases."
+    ]
+  },
+  {
+    "id": 2,
+    "title": "Database Operations",
+    "content": "CRUD operations (Create, Read, Update, Delete) are used to manipulate data in a database.",
+    "questions": [
+      "What are CRUD operations?",
+      "How do you insert data in SQL?",
+      "Explain the SELECT query."
+    ]
+  }
+]
+

@@ -1,0 +1,47 @@
+[
+  {
+    "id": 1,
+    "title": "Introduction to TypeScript",
+    "content": "TypeScript is a strongly typed superset of JavaScript that compiles to plain JavaScript. It offers static typing, classes, interfaces, and other features to enhance JS development.",
+    "questions": [
+      "What is TypeScript and how is it different from JavaScript?",
+      "What are the benefits of using TypeScript in large projects?"
+    ]
+  },
+  {
+    "id": 2,
+    "title": "Type Annotations",
+    "content": "Type annotations allow developers to define the type of variables, function parameters, and return values. This helps catch errors at compile time.",
+    "questions": [
+      "How do you declare a variable with a type in TypeScript?",
+      "What types can be used in TypeScript?"
+    ]
+  },
+  {
+    "id": 3,
+    "title": "Interfaces",
+    "content": "Interfaces define the structure of objects and ensure that objects conform to a particular shape, making code more predictable.",
+    "questions": [
+      "How do you define an interface in TypeScript?",
+      "Can an interface extend another interface?"
+    ]
+  },
+  {
+    "id": 4,
+    "title": "Classes",
+    "content": "TypeScript classes are similar to ES6 classes but support access modifiers (public, private, protected) and other OOP features.",
+    "questions": [
+      "How do you declare a class in TypeScript?",
+      "What are the access modifiers in TypeScript classes?"
+    ]
+  },
+  {
+    "id": 5,
+    "title": "Generics",
+    "content": "Generics allow you to write reusable components that work with different types without losing type safety.",
+    "questions": [
+      "What is a generic in TypeScript?",
+      "How do you define a generic function or class?"
+    ]
+  }
+]

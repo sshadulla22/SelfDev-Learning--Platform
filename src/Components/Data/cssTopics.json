@@ -1,0 +1,29 @@
+[
+  {
+    "id": 1,
+    "title": "Introduction to CSS",
+    "content": "CSS (Cascading Style Sheets) is used to style HTML elements, control layout, colors, fonts, and more.",
+    "questions": [
+      "What is the difference between inline, internal, and external CSS?",
+      "Explain the concept of specificity in CSS."
+    ]
+  },
+  {
+    "id": 2,
+    "title": "Selectors",
+    "content": "CSS selectors are patterns used to select the HTML elements you want to style. They include class, id, pseudo-classes, and more.",
+    "questions": [
+      "What is the difference between class selector and id selector?",
+      "What are pseudo-classes? Give examples."
+    ]
+  },
+  {
+    "id": 3,
+    "title": "Box Model",
+    "content": "Every HTML element is a rectangular box. The box model consists of content, padding, border, and margin.",
+    "questions": [
+      "Explain the CSS box model.",
+      "How does box-sizing affect element dimensions?"
+    ]
+  }
+]

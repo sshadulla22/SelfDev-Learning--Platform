@@ -1,0 +1,128 @@
+/* Navigation.css */
+
+/* Reset & Base */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+
+/* NAVBAR */
+.navbar {
+  display: flex;
+  justify-content: space-between;   /* brand left, menu right */
+  align-items: center;              /* vertically center */
+  background-color: #000;
+  padding: 10px 12px;  
+  gap: 30px;             /* reduced for no extra space */
+  color: #fff;
+ border-bottom: 1px dashed #0f0;
+}
+
+/* LINKS */
+.navbar a {
+  color: #fff;
+  display: grid;
+  grid-template-columns: 30px 1fr; /* icon + text */
+  align-items: center;
+
+  text-decoration: none;
+  padding: 6px 10px;                /* compact spacing */
+  transition: color 0.3s ease;
+}
+
+
+/* BRAND */
+.navbar-brand {
+  font-size: 1.4rem;
+  font-weight: bold;
+}
+
+/* MENU */
+.nav-links {
+  display: flex;
+  gap: 10px;                          /* small gap, no big space */
+  align-items: center;
+  list-style: none;
+}
+
+.nav-item {
+  position: relative;
+}
+
+
+.dropdown-menu {
+  position: absolute;
+  font-weight: 500;
+  top: 100%;
+  background-color: #111;
+  border: 1px solid #333;
+  border-radius: 5px;
+  min-width: 170px;
+  display: none;                    /* hidden by default */
+  flex-direction: column;
+}
+
+.nav-item:hover .dropdown-menu {
+  display: block;                   /* show on hover */
+}
+
+.dropdown-menu a {
+  padding: 10px 14px;
+  color: #ccc;
+}
+
+.dropdown-menu a:hover {
+  background-color: #222;
+  color: #4ade80;
+}
+
+.dropdown-divider {
+  border-top: 1px solid #333;
+}
+
+/* SEARCH BAR */
+.search-form {
+  display: flex;
+  align-items: center;
+  gap: 5px;
+}
+
+.search-form input[type="search"] {
+  padding: 6px 10px;
+  border-radius: 5px;
+  border: 1px solid #333;
+  background-color: #111;
+  color: #fff;
+}
+
+.search-form button {
+  padding: 6px 10px;
+  border-radius: 5px;
+  border: 1px solid #4ade80;
+  background-color: #000;
+  color: #4ade80;
+  transition: 0.3s ease;
+}
+
+.search-form button:hover {
+  background-color: #4ade80;
+  color: #000;
+}
+
+/* Disabled Link */
+.disabled {
+  pointer-events: none;
+  opacity: 0.5;
+}
+
+
+/* Small screens */
+@media (max-width: 700px) {
+  .navbar-brand {
+    font-size: 25px;   /* smaller font */
+    content: "Topics"; /* pseudo-element can't replace text fully */
+    margin-left: 45px;
+  }
+}

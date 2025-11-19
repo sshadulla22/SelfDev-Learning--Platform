@@ -1,0 +1,22 @@
+[
+  {
+    "id": 1,
+    "title": "Introduction to REST APIs",
+    "content": "REST (Representational State Transfer) APIs allow communication between client and server using HTTP requests...",
+    "questions": [
+      "What is a REST API?",
+      "Explain the difference between REST and SOAP.",
+      "What are the common HTTP methods used in REST?"
+    ]
+  },
+  {
+    "id": 2,
+    "title": "Building REST APIs",
+    "content": "You can build REST APIs using frameworks like Express.js in Node.js, Django REST Framework, or Flask...",
+    "questions": [
+      "How do you create a REST endpoint?",
+      "What is status code 404 used for?",
+      "What is the purpose of JSON in REST APIs?"
+    ]
+  }
+]

@@ -1,0 +1,8 @@
+[
+  {
+    "id": 1,
+    "title": "HTML Basics",
+    "content": "HTML is the markup language used to structure web pages.",
+    "questions": ["What is HTML?", "Explain HTML tags."]
+  }
+]

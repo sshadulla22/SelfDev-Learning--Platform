@@ -1,0 +1,29 @@
+[
+  {
+    "id": 1,
+    "title": "Introduction to JavaScript",
+    "content": "JavaScript is a versatile programming language used for web development...",
+    "questions": [
+      "What is JavaScript?",
+      "Difference between var, let, and const?"
+    ]
+  },
+  {
+    "id": 2,
+    "title": "Variables and Data Types",
+    "content": "JavaScript supports several data types including string, number, boolean...",
+    "questions": [
+      "What are primitive data types in JavaScript?",
+      "Explain type coercion in JavaScript."
+    ]
+  },
+  {
+    "id": 3,
+    "title": "Functions",
+    "content": "Functions are reusable blocks of code. JavaScript supports function declarations, expressions, and arrow functions...",
+    "questions": [
+      "What is the difference between function declaration and arrow function?",
+      "Explain closures in JavaScript."
+    ]
+  }
+]

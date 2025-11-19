@@ -1,0 +1,38 @@
+[
+  {
+    "id": 1,
+    "title": "Introduction to Web APIs",
+    "content": "Web APIs allow applications to communicate over the web using HTTP requests and responses.",
+    "questions": [
+      "What is a Web API?",
+      "How do APIs facilitate communication between applications?"
+    ]
+  },
+  {
+    "id": 2,
+    "title": "REST APIs",
+    "content": "REST APIs use HTTP methods like GET, POST, PUT, DELETE to manage resources.",
+    "questions": [
+      "What are RESTful principles?",
+      "Difference between REST and SOAP?"
+    ]
+  },
+  {
+    "id": 3,
+    "title": "JSON and Data Formats",
+    "content": "JSON is a lightweight data format commonly used for API responses.",
+    "questions": [
+      "What is JSON?",
+      "Why is JSON preferred over XML?"
+    ]
+  },
+  {
+    "id": 4,
+    "title": "Authentication & Security",
+    "content": "APIs often require authentication using tokens or API keys to secure data access.",
+    "questions": [
+      "What is an API key?",
+      "Explain OAuth authentication flow."
+    ]
+  }
+]

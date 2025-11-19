@@ -1,0 +1,21 @@
+[
+  {
+    "id": 1,
+    "title": "Introduction to Deployment",
+    "content": "Deployment is the process of making your application live on a server or cloud platform...",
+    "questions": [
+      "What is deployment?",
+      "Name different deployment platforms.",
+      "Explain CI/CD briefly."
+    ]
+  },
+  {
+    "id": 2,
+    "title": "Deployment Platforms",
+    "content": "Common deployment platforms include Heroku, Netlify, AWS, and Vercel...",
+    "questions": [
+      "Which platform is better for static sites?",
+      "Which platform is better for Node.js apps?"
+    ]
+  }
+]

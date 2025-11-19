@@ -1,0 +1,152 @@
+[
+  {
+    "id": 1,
+    "title": "Introduction",
+    "content": "React is a JavaScript library for building user interfaces. It helps create reusable UI components and manage state efficiently.",
+    "questions": [
+      "What is React?",
+      "Why use React over vanilla JS or other frameworks?",
+      "What are the key features of React?"
+    ]
+  },
+  {
+    "id": 2,
+    "title": "Components",
+    "content": "Components are reusable building blocks of a React app. They can be functional or class-based, and can manage their own state and props.",
+    "questions": [
+      "What is a React component?",
+      "Difference between functional and class components?",
+      "What is a pure component?"
+    ]
+  },
+  {
+    "id": 3,
+    "title": "JSX",
+    "content": "JSX lets you write HTML-like code in React. It's a syntax extension of JavaScript that gets compiled to React.createElement calls.",
+    "questions": [
+      "What is JSX?",
+      "Why JSX is used in React?",
+      "Can we use React without JSX?"
+    ]
+  },
+  {
+    "id": 4,
+    "title": "State",
+    "content": "State stores data inside a component that can change over time. Updating state re-renders the component to reflect changes.",
+    "questions": [
+      "What is state in React?",
+      "How do you update state in functional components?",
+      "Difference between state and props?"
+    ]
+  },
+  {
+    "id": 5,
+    "title": "Props",
+    "content": "Props are used to pass data from parent to child components. Props are read-only and cannot be modified by the child.",
+    "questions": [
+      "What are props?",
+      "Difference between props and state?",
+      "Can props be changed inside a child component?"
+    ]
+  },
+  {
+    "id": 6,
+    "title": "Hooks",
+    "content": "Hooks like useState, useEffect let you manage state and lifecycle in functional components. Other hooks include useContext, useReducer, and custom hooks.",
+    "questions": [
+      "What are React hooks?",
+      "Difference between useState and useReducer?",
+      "How does useEffect work?"
+    ]
+  },
+  {
+    "id": 7,
+    "title": "Routing",
+    "content": "React Router is used for navigation between pages in a React app. It allows single-page applications to have multiple views.",
+    "questions": [
+      "What is React Router?",
+      "Difference between BrowserRouter and HashRouter?",
+      "How to create nested routes?"
+    ]
+  },
+  {
+    "id": 8,
+    "title": "Context API",
+    "content": "Context API allows global state management without prop drilling. It is useful for sharing data like themes, user info, or language settings.",
+    "questions": [
+      "What is Context API?",
+      "When should you use Context API?",
+      "Difference between Context API and Redux?"
+    ]
+  },
+  {
+    "id": 9,
+    "title": "Forms",
+    "content": "Forms in React use controlled or uncontrolled components. Controlled components keep form data in the state.",
+    "questions": [
+      "What are controlled components?",
+      "How to handle form submission in React?",
+      "How to validate forms in React?"
+    ]
+  },
+  {
+    "id": 10,
+    "title": "Advanced Topics",
+    "content": "Advanced React topics include HOC (Higher Order Components), Render Props, Error Boundaries, React.memo for optimization, and code splitting.",
+    "questions": [
+      "What is an HOC?",
+      "What are Error Boundaries?",
+      "How to optimize React apps using React.memo?"
+    ]
+  },
+  {
+    "id": 11,
+    "title": "Performance Optimization",
+    "content": "Optimizing React apps involves techniques like memoization, code splitting, lazy loading components, and avoiding unnecessary renders.",
+    "questions": [
+      "What is React.memo?",
+      "How to use lazy loading in React?",
+      "What are pure components for optimization?"
+    ]
+  },
+  {
+    "id": 12,
+    "title": "Testing",
+    "content": "React testing involves testing components using Jest and React Testing Library to ensure UI behaves as expected.",
+    "questions": [
+      "How to test a React component?",
+      "What is React Testing Library?",
+      "Difference between shallow and full rendering?"
+    ]
+  },
+  {
+    "id": 13,
+    "title": "State Management",
+    "content": "Managing state globally can be done with Redux, MobX, or Context API depending on app complexity.",
+    "questions": [
+      "When to use Redux?",
+      "Difference between Redux and Context API?",
+      "What are actions, reducers, and store in Redux?"
+    ]
+  },
+  {
+    "id": 14,
+    "title": "Styling",
+    "content": "React components can be styled using CSS, CSS Modules, Styled Components, or libraries like Bootstrap, TailwindCSS.",
+    "questions": [
+      "How to style React components?",
+      "Difference between CSS Modules and Styled Components?",
+      "How to use Bootstrap with React?"
+    ]
+  },
+  {
+    "id": 15,
+    "title": "Deployment",
+    "content": "React apps can be deployed to platforms like Netlify, Vercel, GitHub Pages, or any static hosting.",
+    "questions": [
+      "How to deploy a React app?",
+      "What is create-react-app build folder?",
+      "How to handle routing on static hosts?"
+    ]
+  }
+]

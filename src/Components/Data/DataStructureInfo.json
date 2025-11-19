@@ -1,0 +1,24 @@
+[
+  {
+    "id": 1,
+    "title": "Introduction to Data Structures",
+    "content": "Data structures are ways to store and organize data efficiently. Common types include arrays, linked lists, stacks, queues, trees, and graphs.",
+    "questions": [
+      "What is a data structure?",
+      "Name 3 types of linear data structures.",
+      "What is the difference between stack and queue?"
+    ]
+  },
+  {
+    "id": 2,
+    "title": "Arrays and Linked Lists",
+    "content": "Arrays store elements at contiguous memory locations, while linked lists store elements at non-contiguous locations using nodes and pointers.",
+    "questions": [
+      "How do you traverse an array?",
+      "What is a singly linked list?",
+      "Difference between array and linked list?"
+    ]
+  }
+  
+]
+    
