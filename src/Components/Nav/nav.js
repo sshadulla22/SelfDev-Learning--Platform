@@ -15,13 +15,13 @@ function Nav() {
     { name: 'HTML', icon: FileCode, route: '/html' },
     { name: 'Node.js', icon: Server, route: '/nodejs-info' },
     { name: 'TypeScript', icon: FileType, route: '/typescript' },
-    { name: 'Git & GitHub', icon: GitBranch, route: '/git' },
-    { name: 'Web APIs', icon: Globe, route: '/webapi' },
+    { name: 'Git&GitHub', icon: GitBranch, route: '/git' },
+    { name: 'WebAPIs', icon: Globe, route: '/webapi' },
     { name: 'Testing', icon: TestTube, route: '/testing' },
     { name: 'Security', icon: Shield, route: '/security' },
     { name: 'Deployment', icon: Rocket, route: '/deployment' },
     { name: 'REST APIs', icon: Link2, route: '/restapi' },
-    { name: 'Data Structures', icon: Binary, route: '/data-structures' },
+    { name: 'DS', icon: Binary, route: '/data-structures' },
     { name: 'Algorithms', icon: Binary, route: '/algorithms' },
     { name: 'Databases', icon: Database, route: '/databases' }
   ];
