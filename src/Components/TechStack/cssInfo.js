@@ -41,7 +41,7 @@ function CSSInfo() {
 
       <div className={`sidebar ${sidebarOpen ? 'open' : 'closed'}`}>
         <div className="sidebar-header">
-          <h3>CSS Topics</h3>
+          <h3 className='nav-title'>CSS Topics</h3>
           <div className="progress-info">
             <span style={{ padding: '12px', fontWeight: 'bold', color: '#007ACC' }}>
               {completedTopics.size} / {cssTopics.length} completed

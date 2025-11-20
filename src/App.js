@@ -19,6 +19,7 @@ import RestAPIInfo from './Components/TechStack/RestAPIInfo';
 import DataStructureInfo from './Components/TechStack/DataStructureInfo';
 import AlgorithmInfo from './Components/TechStack/AlgorithmInfo';
 import DatabaseInfo from './Components/TechStack/DatabaseInfo';
+import ReactHooks from './Components/TechStack/ReactHooks.js';
 
 function App() {
   return (
@@ -43,6 +44,7 @@ function App() {
           <Route path="/data-structures" element={<DataStructureInfo />} />
           <Route path="/algorithms" element={<AlgorithmInfo />} />
           <Route path="/databases" element={<DatabaseInfo />} />
+          <Route path="/hooks" element={<ReactHooks />} />
         </Routes>
       </div>
     </Router>

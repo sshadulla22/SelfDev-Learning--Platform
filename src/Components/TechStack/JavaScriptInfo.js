@@ -41,7 +41,7 @@ function JavaScriptInfo() {
 
       <div className={`sidebar ${sidebarOpen ? 'open' : 'closed'}`}>
         <div className="sidebar-header">
-          <h3>JavaScript Topics</h3>
+          <h3 className='nav-title'>JavaScript</h3>
           <div className="progress-info">
             <span style={{ padding: '12px', fontWeight: 'bold', color: '#f0db4f' }}>
               {completedTopics.size} / {jsTopics.length} completed

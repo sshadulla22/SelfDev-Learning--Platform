@@ -1,5 +1,5 @@
 import React, { useState } from 'react';
-import topics from '../Data/GitInfo.json';
+import topics from '../Data/GitInfo';
 import './Global.css';
 import { FaGitAlt } from 'react-icons/fa'; // Git icon
 
@@ -42,7 +42,7 @@ function GitInfo() {
 
       <div className={`sidebar ${sidebarOpen ? 'open' : 'closed'}`}>
         <div className="sidebar-header">
-          <h3>Git & GitHub Topics</h3>
+          <h3 className='nav-title'>Git & GitHub Topics</h3>
           <div className="progress-info">
             <span style={{ padding: '12px', fontWeight: 'bold', color: '#f34f29' }}>
               {completedTopics.size} / {topics.length} completed
@@ -78,7 +78,10 @@ function GitInfo() {
             <span className="topic-badge">{selectedTopic.id}.</span>
             {selectedTopic.title}
           </h2>
-          <button className={`complete-btn ${completedTopics.has(selectedTopic.id) ? 'completed' : ''}`} onClick={toggleComplete}>
+          <button
+            className={`complete-btn ${completedTopics.has(selectedTopic.id) ? 'completed' : ''}`}
+            onClick={toggleComplete}
+          >
             {completedTopics.has(selectedTopic.id) ? '✓ Completed' : 'Mark Complete'}
           </button>
         </div>
@@ -98,8 +101,20 @@ function GitInfo() {
         </div>
 
         <div className="navigation-buttons">
-          <button onClick={goToPrevious} disabled={selectedTopic.id === 1} className="nav-btn prev-btn">← Previous</button>
-          <button onClick={goToNext} disabled={selectedTopic.id === topics.length} className="nav-btn next-btn">Next →</button>
+          <button
+            onClick={goToPrevious}
+            disabled={selectedTopic.id === 1}
+            className="nav-btn prev-btn"
+          >
+            ← Previous
+          </button>
+          <button
+            onClick={goToNext}
+            disabled={selectedTopic.id === topics.length}
+            className="nav-btn next-btn"
+          >
+            Next →
+          </button>
         </div>
       </div>
     </div>

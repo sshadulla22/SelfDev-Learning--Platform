@@ -2,151 +2,460 @@
   {
     "id": 1,
     "title": "Introduction",
-    "content": "React is a JavaScript library for building user interfaces. It helps create reusable UI components and manage state efficiently.",
-    "questions": [
-      "What is React?",
-      "Why use React over vanilla JS or other frameworks?",
-      "What are the key features of React?"
+    "content": "React is a declarative, component-based JavaScript library used to build fast and interactive user interfaces. Developed by Facebook, it follows a virtual DOM approach to improve rendering performance and encourages building reusable components.",
+    "qa_pairs": [
+      {
+        "question": "What is React?",
+        "answer": "React is an open-source, front-end JavaScript library for building user interfaces based on UI components. It allows developers to create large web applications that use data that changes over time without reloading the page."
+      },
+      {
+        "question": "Why use React over vanilla JS or other frameworks?",
+        "answer": "React's primary advantages are its declarative approach, the use of the Virtual DOM for optimized performance, and its component-based architecture, which promotes reusability and easier debugging. It simplifies complex state management and UI updates compared to manipulating the browser's native DOM directly."
+      },
+      {
+        "question": "What are the key features of React?",
+        "answer": "JSX (Syntax extension), Virtual DOM (Performance optimization), One-way Data Binding (Unidirectional flow), Components (Reusable UI elements), and Hooks (Enabling state/lifecycle in functional components)."
+      },
+      {
+        "question": "Explain Virtual DOM.",
+        "answer": "The Virtual DOM (VDOM) is a programming concept where a virtual representation of a UI is kept in memory and synced with the 'real' DOM. When state changes, React first updates the VDOM. It then efficiently calculates the minimum changes needed (a process called 'diffing') and updates *only* those changes in the browser's real DOM. This minimizes direct DOM manipulation, which is slow. [Image of React Virtual DOM workflow]"
+      },
+      {
+        "question": "What is declarative programming in React?",
+        "answer": "Declarative programming means you tell React *what* the desired final UI state should look like, and React handles the steps to achieve that state. This is contrasted with imperative programming, where you must manually write the steps to manipulate the DOM to reach the desired state."
+      }
     ]
   },
   {
     "id": 2,
     "title": "Components",
-    "content": "Components are reusable building blocks of a React app. They can be functional or class-based, and can manage their own state and props.",
-    "questions": [
-      "What is a React component?",
-      "Difference between functional and class components?",
-      "What is a pure component?"
+    "content": "Components are the reusable UI building blocks of a React application. Every React app is made up of multiple components that manage structure, behavior, and UI. Components can be functional or class-based, can accept props, and maintain their own state.",
+    "qa_pairs": [
+      {
+        "question": "What is a React component?",
+        "answer": "A component is an isolated, reusable piece of code that returns React elements describing what should appear on the screen. They serve the same purpose as JavaScript functions, accepting arbitrary inputs (props) and returning UI elements."
+      },
+      {
+        "question": "Difference between functional and class components?",
+        "answer": "Functional Components are simple JavaScript functions that accept `props` as arguments and return JSX. They are primarily used for UI rendering and utilize Hooks to manage state and side effects. Class Components are ES6 classes that extend `React.Component` and rely on `this.state`, `this.props`, and lifecycle methods. Functional components are now the standard."
+      },
+      {
+        "question": "What is a pure component?",
+        "answer": "`React.PureComponent` is similar to `React.Component` but it implements `shouldComponentUpdate()` with a shallow comparison of props and state. This avoids re-renders if props/state haven't changed, optimizing performance. (For functional components, the equivalent is `React.memo`)."
+      },
+      {
+        "question": "What are controlled vs uncontrolled components?",
+        "answer": "Controlled Components manage their form input values using React state. Every state change is handled by a state update function. Uncontrolled Components store their own state internally and you query the DOM using a `ref` to find their current value upon submission. Controlled components are generally preferred."
+      },
+      {
+        "question": "What is component composition?",
+        "answer": "Component composition is the practice of combining smaller, simple components to build complex components. It is the fundamental way React applications are structured, often involving passing components as children (`props.children`) or passing data via props."
+      }
     ]
   },
   {
     "id": 3,
     "title": "JSX",
-    "content": "JSX lets you write HTML-like code in React. It's a syntax extension of JavaScript that gets compiled to React.createElement calls.",
-    "questions": [
-      "What is JSX?",
-      "Why JSX is used in React?",
-      "Can we use React without JSX?"
+    "content": "JSX is a JavaScript syntax extension that allows writing HTML-like code inside JavaScript. JSX gets compiled into `React.createElement()` calls. JSX makes UI code more readable and easier to maintain.",
+    "qa_pairs": [
+      {
+        "question": "What is JSX?",
+        "answer": "JSX (JavaScript XML) is a syntax extension that looks like HTML but is used within JavaScript files. It is not mandatory, but it's the standard way to describe the UI structure in React."
+      },
+      {
+        "question": "Why is JSX used in React?",
+        "answer": "JSX is a syntactic sugar that makes the code more intuitive and readable by visually representing the structure of the UI components. It also allows React to include necessary checks and warnings during compilation."
+      },
+      {
+        "question": "Can React work without JSX?",
+        "answer": "Yes, React can work without JSX. You would have to manually use the underlying API, such as `React.createElement('div', { id: 'app' }, 'Hello');`, but this is verbose and much less common."
+      },
+      {
+        "question": "How does JSX get compiled internally?",
+        "answer": "JSX is transformed into plain JavaScript using tools like **Babel**. During compilation, the JSX tags are converted into calls to `React.createElement()`."
+      },
+      {
+        "question": "What are JSX expressions?",
+        "answer": "JSX expressions are any valid JavaScript expressions enclosed within curly braces `{}` inside the JSX markup. This is how you embed variables, function calls, conditional logic, or map over arrays to generate lists."
+      }
     ]
   },
   {
     "id": 4,
     "title": "State",
-    "content": "State stores data inside a component that can change over time. Updating state re-renders the component to reflect changes.",
-    "questions": [
-      "What is state in React?",
-      "How do you update state in functional components?",
-      "Difference between state and props?"
+    "content": "State represents mutable data stored within a component. State updates trigger re-rendering. Functional components use the `useState` hook to manage state, while class components use `this.state` and `setState()`.",
+    "qa_pairs": [
+      {
+        "question": "What is state in React?",
+        "answer": "State is a plain JavaScript object that holds data or information about the component. It determines how the component renders and behaves. Unlike props, state is private and controlled by the component itself."
+      },
+      {
+        "question": "How do you update state in functional components?",
+        "answer": "State is updated using the setter function returned by the `useState` hook. Example: `const [count, setCount] = useState(0);` - you call `setCount(count + 1);`."
+      },
+      {
+        "question": "Difference between state and props?",
+        "answer": "State is internal, mutable, and controlled by the component. Props (Properties) are external, immutable, and passed down from a parent component to a child component."
+      },
+      {
+        "question": "Why should state updates be immutable?",
+        "answer": "React relies on detecting *changes* to objects/arrays to know when to re-render. If you mutate an object or array in state (e.g., `state.list.push(item)`), the object reference remains the same, and React might not detect the change, leading to missed updates. By creating a *new* object/array, you provide a new reference, forcing React to see the update and re-render."
+      },
+      {
+        "question": "Why is state asynchronous?",
+        "answer": "In class components (via `this.setState()`) and often in functional components, React batches multiple state updates that happen within a short timeframe (like within a single event handler) into a single re-render cycle for performance optimization. Therefore, state updates are not immediately applied, making them asynchronous."
+      }
     ]
   },
   {
     "id": 5,
     "title": "Props",
-    "content": "Props are used to pass data from parent to child components. Props are read-only and cannot be modified by the child.",
-    "questions": [
-      "What are props?",
-      "Difference between props and state?",
-      "Can props be changed inside a child component?"
+    "content": "Props are inputs passed from parent to child components. Props are immutable and allow components to communicate with each other. Props enable reusability and dynamic content rendering.",
+    "qa_pairs": [
+      {
+        "question": "What are props?",
+        "answer": "Props are short for properties. They are read-only objects passed from a parent component to its child components to customize them and give them data."
+      },
+      {
+        "question": "Difference between props and state?",
+        "answer": "(See section 4, State)"
+      },
+      {
+        "question": "Can props be changed inside a child component?",
+        "answer": "No. Props are read-only and immutable within the child component. A child component should never modify the props it receives. If a child needs to affect data in the parent, it must call a function (passed down as a prop) which then updates the parent's state."
+      },
+      {
+        "question": "What are default props?",
+        "answer": "`defaultProps` are used to define default values for props, ensuring that the `props` property will have a value if the parent doesn't explicitly pass one. This improves component robustness."
+      },
+      {
+        "question": "What is prop drilling?",
+        "answer": "Prop drilling is the practice of passing data from a high-level parent component down to deeply nested child components through intermediate components that don't need the data themselves. It makes code harder to maintain. Solutions include the Context API or dedicated state management libraries."
+      }
     ]
   },
   {
     "id": 6,
     "title": "Hooks",
-    "content": "Hooks like useState, useEffect let you manage state and lifecycle in functional components. Other hooks include useContext, useReducer, and custom hooks.",
-    "questions": [
-      "What are React hooks?",
-      "Difference between useState and useReducer?",
-      "How does useEffect work?"
+    "content": "Hooks allow functional components to use state and lifecycle features. Common hooks include `useState`, `useEffect`, `useContext`, `useRef`, `useReducer`, `useMemo`, and `useCallback`. Custom hooks help reuse logic.",
+    "qa_pairs": [
+      {
+        "question": "What are React hooks?",
+        "answer": "Hooks are functions that let you 'hook into' React state and lifecycle features from functional components. They were introduced in React 16.8 to allow developers to write React without classes."
+      },
+      {
+        "question": "Difference between useState and useReducer?",
+        "answer": " `useState` is generally used for managing simple state types (primitives like strings, numbers, booleans) or when updates are simple. `useReducer` is used for complex state logic involving multiple sub-values or when the next state depends on the previous one. It's similar to Redux's pattern (action, reducer, state)."
+      },
+      {
+        "question": "How does useEffect work?",
+        "answer": "`useEffect` is a hook that allows you to perform side effects in functional components, such as data fetching, subscriptions, or manually changing the DOM. It runs *after* every render by default. You control when it runs using the optional dependency array: "
+      },
+      {
+        "question": "What are custom hooks?",
+        "answer": "A custom hook is a JavaScript function whose name starts with 'use' (e.g., `useToggle`). It allows you to reuse stateful logic across multiple components without duplicating the logic itself. They often leverage built-in hooks."
+      },
+      {
+        "question": "What are the rules of hooks?",
+        "answer": "1. **Only call hooks at the top level:** Do not call hooks inside loops, conditions, or nested functions. 2. **Only call hooks from React functional components or custom hooks:** Do not call them from regular JavaScript functions or class components."
+      }
     ]
   },
   {
     "id": 7,
     "title": "Routing",
-    "content": "React Router is used for navigation between pages in a React app. It allows single-page applications to have multiple views.",
-    "questions": [
-      "What is React Router?",
-      "Difference between BrowserRouter and HashRouter?",
-      "How to create nested routes?"
+    "content": "React Router enables navigation between different views in a single-page React application. It supports nested routes, dynamic routing, protected routes, and URL parameters.",
+    "qa_pairs": [
+      {
+        "question": "What is React Router?",
+        "answer": "React Router is the most popular library for routing in React. It provides declarative routing and navigation within a single-page application (SPA) by synchronizing the UI with the URL."
+      },
+      {
+        "question": "Difference between BrowserRouter and HashRouter?",
+        "answer": " `BrowserRouter` uses the HTML5 history API (`pushState`, `replaceState`) to keep the UI in sync with the URL (e.g., `/users/1`). It requires server-side configuration for handling deep links. `HashRouter` uses the URL hash (`#`) to keep the UI in sync with the URL (e.g., `/#/users/1`). It doesn't require server configuration but looks less clean."
+      },
+      {
+        "question": "How to create nested routes?",
+        "answer": "Nested routes are created by nesting `<Route>` components within a parent component that is itself rendered by a route. Modern React Router uses a hierarchy of route definitions to handle complex layouts."
+      },
+      {
+        "question": "What are URL parameters?",
+        "answer": "URL parameters (or dynamic segments) are parts of the URL used to pass specific data to a component. For example, in the route `/users/:id`, `:id` is a URL parameter. You access its value using the `useParams` hook."
+      },
+      {
+        "question": "How do protected routes work?",
+        "answer": "Protected routes are routes that require authentication or authorization before accessing. This is typically implemented using a wrapper component that checks the user's login status (usually via Context or Redux). If the user is logged in, it renders the child component; otherwise, it redirects the user to the login page. "
+      }
     ]
   },
   {
     "id": 8,
     "title": "Context API",
-    "content": "Context API allows global state management without prop drilling. It is useful for sharing data like themes, user info, or language settings.",
-    "questions": [
-      "What is Context API?",
-      "When should you use Context API?",
-      "Difference between Context API and Redux?"
+    "content": "The Context API enables global state management without prop drilling. It allows data like user authentication, themes, language, and configuration to be accessed anywhere in the component tree.",
+    "qa_pairs": [
+      {
+        "question": "What is Context API?",
+        "answer": "The React Context API provides a way to pass data through the component tree without having to pass props down manually at every level. It's designed for sharing data that is considered 'global' for a tree of React components."
+      },
+      {
+        "question": "When should you use Context API?",
+        "answer": "Use Context for application-wide data that is rarely updated, such as: user authentication status, theme (dark/light mode), preferred language, and application configuration."
+      },
+      {
+        "question": "Difference between Context API and Redux?",
+        "answer": "Context API is a simpler, built-in solution best suited for small to medium applications and managing simple, infrequent updates (e.g., themes). Redux (or similar libraries like Zustand) is a dedicated library for complex, centralized state management in large applications, offering robust debugging tools, middleware, and predictable state changes."
+      },
+      {
+        "question": "What is a provider and consumer?",
+        "answer": "The **Provider** component makes the context value available to consuming components in its subtree. The **Consumer** component (or the `useContext` hook) subscribes to context changes. Every time the Provider's value changes, all subscribing Consumers re-render. "
+      },
+      {
+        "question": "What problem does prop drilling create?",
+        "answer": "Prop drilling creates deeply coupled and fragile components. It requires intermediate components, which don't need the data, to be modified whenever the data structure or requirements change, making the application difficult to refactor and maintain."
+      }
     ]
   },
   {
     "id": 9,
     "title": "Forms",
-    "content": "Forms in React use controlled or uncontrolled components. Controlled components keep form data in the state.",
-    "questions": [
-      "What are controlled components?",
-      "How to handle form submission in React?",
-      "How to validate forms in React?"
+    "content": "Forms in React can be handled using controlled or uncontrolled components. Controlled forms store input values in state, whereas uncontrolled forms rely on refs. Form validation can be implemented manually or using libraries.",
+    "qa_pairs": [
+      {
+        "question": "What are controlled components?",
+        "answer": "In a controlled component, the form elements (like `<input>`, `<textarea>`, `<select>`) render their data based on the component's state, and their input changes are handled by event handlers (`onChange`) that update the state. The form data is thus controlled by React."
+      },
+      {
+        "question": "How to handle form submission in React?",
+        "answer": "You handle form submission by providing a function to the `onSubmit` prop of the `<form>` element. Inside the handler, you must call `event.preventDefault()` to stop the default browser behavior of reloading the page. The handler then processes the data stored in the component's state."
+      },
+      {
+        "question": "How to validate forms in React?",
+        "answer": "Validation can be done manually within the form submission handler or the `onChange` handler by checking the state values. For complex forms, it is recommended to use dedicated libraries like **Yup** (for schema validation) combined with form libraries like **React Hook Form** or **Formik**."
+      },
+      {
+        "question": "What are uncontrolled components?",
+        "answer": "Uncontrolled components let the DOM handle the form data. Input values are accessed directly from the DOM using a **ref** upon form submission, bypassing React's state management for the input values."
+      },
+      {
+        "question": "Why use React Hook Form?",
+        "answer": "React Hook Form is popular because it focuses on performance by utilizing uncontrolled components and refs to manage form state internally. This avoids re-renders on every keystroke, which is common in purely controlled components, making large forms very fast."
+      }
     ]
   },
   {
     "id": 10,
     "title": "Advanced Topics",
-    "content": "Advanced React topics include HOC (Higher Order Components), Render Props, Error Boundaries, React.memo for optimization, and code splitting.",
-    "questions": [
-      "What is an HOC?",
-      "What are Error Boundaries?",
-      "How to optimize React apps using React.memo?"
+    "content": "Advanced concepts include HOCs, Render Props, Error Boundaries, code splitting, portals, and advanced optimization with memoization. These techniques improve flexibility, performance, and scalability.",
+    "qa_pairs": [
+      {
+        "question": "What is an HOC?",
+        "answer": "HOC (Higher-Order Component) is an advanced technique for reusing component logic. It is a function that takes a component as an argument and returns a new component with enhanced props or behavior. Example: `const EnhancedComponent = withAuth(MyComponent);`."
+      },
+      {
+        "question": "What are Error Boundaries?",
+        "answer": "Error Boundaries are React components that catch JavaScript errors anywhere in their child component tree, log those errors, and display a fallback UI instead of crashing the entire application. They are implemented by defining either `static getDerivedStateFromError()` or `componentDidCatch()`. "
+      },
+      {
+        "question": "How to optimize React apps using React.memo?",
+        "answer": " `React.memo` is a HOC used to wrap a functional component. It prevents the component from re-rendering if its props have not changed (shallow comparison). It's primarily used for performance optimization of components that frequently re-render with the same props."
+      },
+      {
+        "question": "What are portals in React?",
+        "answer": "Portals provide a way to render children into a DOM node that exists outside the DOM hierarchy of the parent component. They are useful for modals, tooltips, and notification pop-ups where the component needs to escape its parent's CSS (like `overflow: hidden`)."
+      },
+      {
+        "question": "What is render props?",
+        "answer": "The render prop is a technique where a component receives a function via a prop (usually named `render` or `children`) and calls that function instead of implementing its own rendering logic. This allows the component to share its logic/state with the consuming component, which decides what to render."
+      }
     ]
   },
   {
     "id": 11,
     "title": "Performance Optimization",
-    "content": "Optimizing React apps involves techniques like memoization, code splitting, lazy loading components, and avoiding unnecessary renders.",
-    "questions": [
-      "What is React.memo?",
-      "How to use lazy loading in React?",
-      "What are pure components for optimization?"
+    "content": "React performance can be improved using techniques such as memoization (`useMemo`, `useCallback`), `React.memo`, lazy loading, code splitting, virtualization, avoiding unnecessary re-renders, and batching updates.",
+    "qa_pairs": [
+      {
+        "question": "What is React.memo?",
+        "answer": " `React.memo` is a Higher-Order Component (HOC) that optimizes functional components by skipping re-rendering when props are unchanged. It performs a **shallow comparison** of props. "
+      },
+      {
+        "question": "How to use lazy loading in React?",
+        "answer": "Lazy loading (or code splitting) is implemented using `React.lazy()` and `<Suspense>`. `React.lazy()` lets you render a dynamic import as a regular component, and `<Suspense>` allows you to display a fallback (like a loading spinner) while the lazy component is loading."
+      },
+      {
+        "question": "What are pure components?",
+        "answer": "(See section 2, Components)"
+      },
+      {
+        "question": "What is virtualization?",
+        "answer": "Virtualization (or windowing) is a technique for rendering very large lists efficiently. Instead of rendering the entire list, it only renders the items that are currently visible within the viewport, and potentially a small buffer around them. This significantly reduces DOM nodes and improves rendering speed."
+      },
+      {
+        "question": "How does memoization work?",
+        "answer": "Memoization is an optimization technique that stores the result of an expensive function call and returns the cached result when the same inputs occur again. In React, `useMemo` is used to memoize values, and `useCallback` is used to memoize function definitions to prevent them from being unnecessarily re-created on every render."
+      }
     ]
   },
   {
     "id": 12,
     "title": "Testing",
-    "content": "React testing involves testing components using Jest and React Testing Library to ensure UI behaves as expected.",
-    "questions": [
-      "How to test a React component?",
-      "What is React Testing Library?",
-      "Difference between shallow and full rendering?"
+    "content": "React testing ensures components behave correctly. Jest is used for running tests, and React Testing Library is used for testing UI interactions. Snapshot testing helps detect UI changes.",
+    "qa_pairs": [
+      {
+        "question": "How to test a React component?",
+        "answer": "Components are typically tested using: **Unit Tests** (testing components in isolation, e.g., checking props and state), **Integration Tests** (testing how components interact), and **End-to-End Tests** (testing the user flow across the entire application). Jest and React Testing Library are the standard tools."
+      },
+      {
+        "question": "What is React Testing Library?",
+        "answer": "React Testing Library (RTL) is a set of utilities focused on testing component behavior in a way that closely resembles how a user interacts with the application (e.g., querying for text, labels, or buttons). It encourages accessibility best practices and discourages testing internal component state/implementation details."
+      },
+      {
+        "question": "Difference between shallow and full rendering?",
+        "answer": "Shallow Rendering (often used in Enzyme) only renders the component itself, without rendering any of its child components. Full Rendering (used by RTL) renders the component and all its children into a simulated browser environment (or a real one for E2E), mimicking the actual component tree. Full rendering is generally preferred as it is closer to the user experience."
+      },
+      {
+        "question": "What is snapshot testing?",
+        "answer": "Snapshot testing involves capturing the rendered output of a component (usually the JSX structure) at a given point in time and storing it in a file. On subsequent runs, Jest compares the new output against the stored snapshot. If they don't match, it alerts the developer, ensuring unintentional UI changes are caught."
+      },
+      {
+        "question": "What is mocking in testing?",
+        "answer": "Mocking is the process of replacing dependencies (like API calls, date functions, or external modules) with controlled substitutes during a test. This ensures that the component being tested is isolated, and tests are fast, predictable, and not dependent on external infrastructure or data."
+      }
     ]
   },
   {
     "id": 13,
     "title": "State Management",
-    "content": "Managing state globally can be done with Redux, MobX, or Context API depending on app complexity.",
-    "questions": [
-      "When to use Redux?",
-      "Difference between Redux and Context API?",
-      "What are actions, reducers, and store in Redux?"
+    "content": "Large applications require centralized state management using tools like Redux, Zustand, MobX, or Context API. Redux uses actions, reducers, and a central store to update app-wide state.",
+    "qa_pairs": [
+      {
+        "question": "When to use Redux?",
+        "answer": "Redux should be considered in large-scale applications where state updates are frequent, complex, and need to be shared across many non-parent-child related components, or when you need robust debugging and logging capabilities provided by its centralized architecture."
+      },
+      {
+        "question": "Difference between Redux and Context API?",
+        "answer": "(See section 8, Context API)"
+      },
+      {
+        "question": "What are actions, reducers, and store in Redux?",
+        "answer": "Store: The single source of truth that holds the entire application state. Actions: Plain JavaScript objects that describe *what happened* (e.g., `{ type: 'ADD_TODO', payload: 'Buy groceries' }`). Reducers: Pure functions that take the current state and an action, and return a *new* state based on the action type. "
+      },
+      {
+        "question": "What is Redux Toolkit?",
+        "answer": "Redux Toolkit (RTK) is the official, opinionated, and modern way to write Redux code. It simplifies common Redux tasks, reduces boilerplate, and includes best practices by default (e.g., using Immer for immutable state updates)."
+      },
+      {
+        "question": "What is middleware in Redux?",
+        "answer": "Middleware sits between the dispatching of an action and the moment it reaches the reducer. It is primarily used for handling side effects, such as asynchronous API calls (e.g., using Redux Thunk or Redux Saga) or logging."
+      }
     ]
   },
   {
     "id": 14,
     "title": "Styling",
-    "content": "React components can be styled using CSS, CSS Modules, Styled Components, or libraries like Bootstrap, TailwindCSS.",
-    "questions": [
-      "How to style React components?",
-      "Difference between CSS Modules and Styled Components?",
-      "How to use Bootstrap with React?"
+    "content": "React supports multiple styling approaches: CSS, CSS Modules, Styled Components, TailwindCSS, Bootstrap, Material UI, and inline styling. Styling method depends on project structure and scalability.",
+    "qa_pairs": [
+      {
+        "question": "How to style React components?",
+        "answer": "Inline Styles (using JS objects), External CSS/SASS (traditional files), CSS Modules (locally scoped CSS classes), CSS-in-JS (e.g., Styled Components), and Utility-First Frameworks (e.g., TailwindCSS)."
+      },
+      {
+        "question": "Difference between CSS Modules and Styled Components?",
+        "answer": "CSS Modules are `.css` files where all class names are locally scoped by default, preventing name clashes. They are a traditional approach but with scope. Styled Components use CSS-in-JS, allowing you to write actual CSS code inside tagged template literals in your JavaScript/React files. They generate unique class names automatically and offer dynamic styling based on props."
+      },
+      {
+        "question": "How to use Bootstrap with React?",
+        "answer": "You can either link the standard Bootstrap CSS files or, preferably, use a React-specific library like **React-Bootstrap** or **Reactstrap**, which re-implements the Bootstrap components as pure React components (without relying on jQuery)."
+      },
+      {
+        "question": "What is TailwindCSS?",
+        "answer": "TailwindCSS is a utility-first CSS framework. Instead of using predefined component classes (like `btn-primary`), it provides low-level utility classes (like `bg-blue-500`, `p-4`, `shadow-lg`) that can be composed directly in the JSX to build custom designs very quickly."
+      },
+      {
+        "question": "What are global styles?",
+        "answer": "Global styles are CSS rules that apply across the entire application, regardless of which component is being rendered. They are typically used for defining CSS variables, setting base font sizes, or normalizing browser default styles (like a CSS reset)."
+      }
     ]
   },
   {
     "id": 15,
     "title": "Deployment",
-    "content": "React apps can be deployed to platforms like Netlify, Vercel, GitHub Pages, or any static hosting.",
-    "questions": [
-      "How to deploy a React app?",
-      "What is create-react-app build folder?",
-      "How to handle routing on static hosts?"
+    "content": "React apps are deployed by creating optimized production builds. Deployment platforms include Netlify, Vercel, GitHub Pages, Firebase Hosting, and traditional servers. Routing requires special configuration on static hosts.",
+    "qa_pairs": [
+      {
+        "question": "How to deploy a React app?",
+        "answer": "You first run the build command (`npm run build` or `yarn build`) to create an optimized, static version of the app (usually in a `/build` or `/dist` folder). This folder's contents are then uploaded to a static hosting service like Vercel or Netlify."
+      },
+      {
+        "question": "What is the build folder in React?",
+        "answer": "The build folder contains the compiled, minified, and optimized static assets (HTML, CSS, JavaScript, images) required to run the production version of the React application."
+      },
+      {
+        "question": "How to handle routing in static hosts?",
+        "answer": "Static hosts often struggle with client-side routing (`BrowserRouter`). If a user navigates directly to a deep link (e.g., `/about`), the server returns a 404. The fix is to configure the static host (via a `_redirects` or `netlify.toml` file) to redirect all unknown paths back to the main `index.html` file, allowing React Router to take over and handle the route."
+      },
+      {
+        "question": "Difference between development and production builds?",
+        "answer": "Development builds include debugging tools, warnings, unminified code, and fast compilation. Production builds are heavily optimized, minified, bundled into single files, and stripped of all non-essential debug code for maximum performance and smallest size."
+      },
+      {
+        "question": "How to deploy React to Vercel?",
+        "answer": "Vercel (or Netlify) can deploy a React app directly from a Git repository. You connect the repo, and the platform automatically detects the React project, runs the build command, and deploys the resulting static files, automatically handling all routing redirects."
+      }
+    ]
+  },
+  {
+    "id": 16,
+    "title": "APIs & Data Fetching",
+    "content": "React apps fetch data using Fetch API, Axios, or libraries like React Query. `useEffect` is commonly used for fetching data on component mount.",
+    "qa_pairs": [
+      {
+        "question": "How to fetch data in React?",
+        "answer": "The standard way is to use the `useEffect` hook. Inside `useEffect`, you define an asynchronous function (e.g., using `fetch` or `axios`), call it, and handle the loading, success, and error states using `useState`."
+      },
+      {
+        "question": "Difference between fetch and Axios?",
+        "answer": "Fetch API is a browser-native API (no install needed) that uses Promises but requires two steps to get JSON data (first to check response, second to parse JSON). Axios is a third-party, promise-based library (requires install) that automatically transforms JSON data, has built-in features for canceling requests, and better default error handling."
+      },
+      {
+        "question": "What is React Query?",
+        "answer": "React Query (or TanStack Query) is a library that provides hooks for managing, caching, synchronizing, and updating server state in your React application. It handles boilerplate tasks like re-fetching data in the background, invalidation, and deduplication of requests, significantly simplifying data management."
+      },
+      {
+        "question": "Why avoid infinite loops inside useEffect?",
+        "answer": "An infinite loop occurs if a state or prop is updated inside `useEffect`, and that state/prop is also listed as a dependency. This causes the effect to run, update the state, trigger a re-render, which runs the effect again, causing a continuous cycle. Always ensure side effect logic is contained and dependencies are correct."
+      },
+      {
+        "question": "What is debounce and throttle?",
+        "answer": "Both are rate-limiting techniques for functions that fire rapidly (e.g., input handlers, scroll events): **Debounce** ensures a function is only executed *after* a specified time has passed since the *last* call. **Throttle** ensures a function is executed at most once every specified time interval."
+      }
+    ]
+  },
+  {
+    "id": 17,
+    "title": "React Lifecycle",
+    "content": "Lifecycle methods exist in class components, such as `componentDidMount`, `componentDidUpdate`, and `componentWillUnmount`. Functional components mimic lifecycle with `useEffect`.",
+    "qa_pairs": [
+      {
+        "question": "What are lifecycle methods?",
+        "answer": "These are special methods available in class components that React automatically calls at specific points during a component's existence: **Mounting** (creation/insertion), **Updating** (re-render/change), and **Unmounting** (removal)."
+      },
+      {
+        "question": "Which lifecycle replaces useEffect?",
+        "answer": "The `useEffect` hook, when used with different dependency array configurations, replaces the functionality of three class lifecycle methods: `componentDidMount` (empty dependency array `[]`), `componentDidUpdate` (no dependency array or with dependencies), and `componentWillUnmount` (by returning a cleanup function)."
+      },
+      {
+        "question": "What is componentWillUnmount used for?",
+        "answer": "`componentWillUnmount` (or the cleanup function returned by `useEffect`) is used to perform any necessary cleanup before the component is destroyed. This includes clearing timers, canceling network requests, and removing event listeners or subscriptions to prevent memory leaks."
+      },
+      {
+        "question": "Difference between mounting, updating, and unmounting?",
+        "answer": "Mounting: Component is being created and inserted into the DOM (initial render). Updating: Component is re-rendering due to changes in state or props. Unmounting: Component is being removed from the DOM."
+      },
+      {
+        "question": "How does React batching work?",
+        "answer": "Batching is a performance optimization where React groups multiple state updates (e.g., several `setCount` calls within a single event handler or during a promise resolution) into a single re-render for better efficiency. Since React 18, batching is applied automatically across asynchronous updates as well (automatic batching)."
+      }
     ]
   }
 ]

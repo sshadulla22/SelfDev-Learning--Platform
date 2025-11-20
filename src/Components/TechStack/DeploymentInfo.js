@@ -37,7 +37,7 @@ function DeploymentInfo() {
 
       <div className={`sidebar ${sidebarOpen ? 'open' : 'closed'}`}>
         <div className="sidebar-header">
-          <h3>Deployment Topics</h3>
+          <h3 className='nav-title'>Deployment Topics</h3>
           <div className="progress-info">
             <span style={{ padding: '12px', fontWeight: 'bold', color: '#667eea' }}>
               {completedTopics.size} / {topics.length} completed

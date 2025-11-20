@@ -12,22 +12,24 @@
 .container {
   background-color: #000;
   display: grid;
+  /* Sidebar width (auto) + Main content (1fr - fills the rest) */
   grid-template-columns: auto 1fr;
   height: 100vh;
   position: relative;
   margin: 0;
-    padding: 0;
+  /* Removed redundant margin: 0; padding: 0; */
 }
 
+/* Toggle Button - Desktop */
 .toggle-btn {
   position: fixed;       /* keeps it fixed relative to viewport */
-  top: 162px;            /* distance from top */
+  top: 12px;             /* Adjusted from 162px for better placement */
   left: 10px;            /* distance from left */
   z-index: 1000;
   width: 40px;
   height: 40px;
   border-radius: 50%;
-  border: 1px solid #4ade80;
+  border: 1px dashed #4ade80;
   background: #0d0d0d;
   display: flex;
   align-items: center;
@@ -38,7 +40,6 @@
   transition: 0.3s ease;
 }
 
-
 .toggle-btn:hover {
   background: #1f1f1f;
   transform: scale(1.1);
@@ -46,13 +47,18 @@
 
 /* Sidebar */
 .sidebar {
-  width: 320px;
+  /* This width is fine */
+  width: 330px;
+  height: 100vh; /* FULL SCREEN HEIGHT */
   background: #000;
   border-right: 1px dashed #0f0;
   transition: transform 0.3s ease;
   padding-top: 20px;
-  overflow-y: scroll;
-  box-shadow: 4px 0 20px rgba(0, 255, 0, 0.05);
+
+  /* Ensures sidebar scrolls independently if content is too long */
+  overflow-y: auto; 
+  overflow-x: hidden;
+  /* When the sidebar is open, it occupies the 'auto' column */
 }
 
 /* Hide Scrollbar */
@@ -64,6 +70,7 @@
 }
 
 .sidebar.closed {
+  /* This works correctly with the grid layout */
   transform: translateX(-100%);
 }
 
@@ -153,16 +160,21 @@
 
 /* Main Content */
 .main-content {
-  flex: 1;
-  width: 70vw;
+  width: 77vw;
+  flex: 1; /* Not needed in grid, but harmless */
+  /* REMOVED width: 70vw; to let the grid (1fr) handle the remaining space perfectly */
   padding: 30px;
-  height: 100vh;
+  height: 100vh; /* Ensures it takes full height of the container cell */
   margin: 10px;
   background: #000;
   color: #e0e0e0;
-  overflow-y: auto;
+  /* This is key for independent smooth scrolling of the content */
+  overflow-y: auto; 
+  overflow-x: hidden;
 }
-
+.main-content::-webkit-scrollbar {
+  display: none;
+}
 /* Content Header */
 .content-header {
   display: flex;
@@ -284,24 +296,40 @@
 
 .nav-title{
 position: relative;
-  left:-30px;
+margin-right: 195px;
 
 }
 
 /* Responsive */
 @media (max-width: 768px) {
   .container {
+    /* Stack content vertically on mobile */
     grid-template-columns: 1fr;
+    /* This ensures that when the sidebar is hidden, the main-content is the only element */
   }
 
+  .content-header h2 {
+  font-size: 20px;
+  color: #4ade80;
+}
+
+  
+  .complete-btn {
+  padding: 8px 6px;
+  font-size: smaller;
+  align-items: center;
+  background-color: #4ade80;
+  color: #000;
+  border-radius: 6px;
+}
 .nav-title{
   font-size: 20px;
   margin-bottom: 15px;
-  left: 10px;
+  margin-right: -40px;
 }
 
   .sidebar {
-    position: fixed;
+    position: fixed; /* Crucial for mobile overlay */
     top: 0;
     left: 1px;
     height: 100%;
@@ -310,28 +338,36 @@ position: relative;
     z-index: 999;
     transition: transform 0.3s ease;
   }
+  
+  /* Sidebar needs to be fixed and full height on mobile */
+  /* No changes needed here, existing CSS is good for mobile overlay */
 
   .sidebar.open {
     transform: translateX(0);
   }
 
   .main-content {
+    /* No longer need 100vh on main-content in mobile grid, but it ensures it fills the viewport on load */
+    height: auto; /* Let content dictate height, scrolling is handled by the page scroll */
+    min-height: 100vh; /* Optional: ensures it fills the viewport even with sparse content */
     margin: 0;
     width: 100%;
     padding: 20px;
+    /* For mobile, the main content is the body of the page, so let the BODY/HTML handle the scroll */
+    overflow-y: visible; 
   }
 
 
   /* Toggle button for mobile */
   .toggle-btn {
     position: fixed;          /* stay visible while scrolling */
-    top: 16px;                /* adjust distance from top */
-    left: 15px;               /* adjust distance from left */
+    top: 10px;                /* consistent placement */
+    left: 10px;               /* adjust distance from left */
     z-index: 1000;
     width: 45px;
     height: 45px;
     border-radius: 50%;
-    border: 1px solid #4ade80;
+    border: 1px dashed #4ade80;
     background: #0d0d0d;
     display: flex;
     align-items: center;
@@ -340,11 +376,6 @@ position: relative;
     color: #4ade80;
     cursor: pointer;
     transition: all 0.3s ease;
-  }
-
-  .toggle-btn:hover {
-    background: #1f1f1f;
-    transform: scale(1.1);
   }
 }
 

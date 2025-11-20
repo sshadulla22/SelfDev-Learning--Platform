@@ -42,7 +42,7 @@ function NodeJSInfo() {
 
       <div className={`sidebar ${sidebarOpen ? 'open' : 'closed'}`}>
         <div className="sidebar-header">
-          <h3>Node.js Topics</h3>
+          <h3 className='nav-title'>Node.js Topics</h3>
           <div className="progress-info">
             <span style={{ padding: '12px', fontWeight: 'bold', color: '#3C873A' }}>
               {completedTopics.size} / {topics.length} completed

@@ -2,37 +2,161 @@
   {
     "id": 1,
     "title": "Introduction to Web APIs",
-    "content": "Web APIs allow applications to communicate over the web using HTTP requests and responses.",
+    "content": "Web APIs (Application Programming Interfaces) allow different software applications to communicate over the web. They enable access to services, data, and functionality from servers or third-party platforms.",
     "questions": [
       "What is a Web API?",
-      "How do APIs facilitate communication between applications?"
+      "Difference between REST and SOAP APIs?",
+      "Why are APIs important in web development?"
     ]
   },
   {
     "id": 2,
-    "title": "REST APIs",
-    "content": "REST APIs use HTTP methods like GET, POST, PUT, DELETE to manage resources.",
+    "title": "Types of Web APIs",
+    "content": "Web APIs can be categorized into REST APIs, SOAP APIs, GraphQL APIs, and WebSocket APIs.",
     "questions": [
-      "What are RESTful principles?",
-      "Difference between REST and SOAP?"
+      "What is a REST API?",
+      "What is SOAP API?",
+      "Difference between REST and GraphQL?"
     ]
   },
   {
     "id": 3,
-    "title": "JSON and Data Formats",
-    "content": "JSON is a lightweight data format commonly used for API responses.",
+    "title": "RESTful API Concepts",
+    "content": "REST (Representational State Transfer) is an architectural style using HTTP methods: GET, POST, PUT, DELETE. REST APIs are stateless and resource-based.",
     "questions": [
-      "What is JSON?",
-      "Why is JSON preferred over XML?"
+      "Explain REST principles.",
+      "What are HTTP methods and their purposes?",
+      "What is statelessness in REST?"
     ]
   },
   {
     "id": 4,
-    "title": "Authentication & Security",
-    "content": "APIs often require authentication using tokens or API keys to secure data access.",
+    "title": "HTTP Methods",
+    "content": "Common HTTP methods for Web APIs include GET (retrieve data), POST (create data), PUT/PATCH (update data), DELETE (remove data).",
     "questions": [
-      "What is an API key?",
-      "Explain OAuth authentication flow."
+      "Difference between PUT and PATCH?",
+      "When to use GET vs POST?",
+      "What is idempotency in HTTP methods?"
+    ]
+  },
+  {
+    "id": 5,
+    "title": "HTTP Status Codes",
+    "content": "HTTP status codes indicate the result of a request. Common ones include 200 (OK), 201 (Created), 400 (Bad Request), 401 (Unauthorized), 404 (Not Found), 500 (Server Error).",
+    "questions": [
+      "What does HTTP 404 mean?",
+      "Difference between 200 and 201 status codes?",
+      "How to handle errors in APIs?"
+    ]
+  },
+  {
+    "id": 6,
+    "title": "API Endpoints and URLs",
+    "content": "API endpoints are specific URLs where API requests are sent. They define the resource being accessed and the action to perform.",
+    "questions": [
+      "What is an API endpoint?",
+      "Difference between base URL and endpoint?",
+      "How to structure RESTful URLs?"
+    ]
+  },
+  {
+    "id": 7,
+    "title": "Request Headers and Parameters",
+    "content": "Request headers send metadata like Content-Type, Authorization. Query parameters filter or customize requests. Path parameters are part of the endpoint URL.",
+    "questions": [
+      "Difference between headers, query, and path parameters?",
+      "How to send Authorization token in headers?",
+      "What is Content-Type?"
+    ]
+  },
+  {
+    "id": 8,
+    "title": "JSON & XML Data Formats",
+    "content": "APIs commonly use JSON for data exchange, and sometimes XML. JSON is lightweight and widely used in modern web development.",
+    "questions": [
+      "Difference between JSON and XML?",
+      "How to parse JSON in JavaScript?",
+      "How to convert objects to JSON?"
+    ]
+  },
+  {
+    "id": 9,
+    "title": "AJAX & Fetch API",
+    "content": "AJAX and Fetch API allow asynchronous HTTP requests from the browser. Fetch uses Promises for handling requests and responses.",
+    "questions": [
+      "How to make a GET request using Fetch?",
+      "Difference between Fetch and XMLHttpRequest?",
+      "How to handle errors in Fetch API?"
+    ]
+  },
+  {
+    "id": 10,
+    "title": "Asynchronous JavaScript & Promises",
+    "content": "APIs require asynchronous calls. Promises, async/await are used to handle asynchronous requests in JavaScript.",
+    "questions": [
+      "Difference between Promises and async/await?",
+      "How to handle multiple API requests simultaneously?",
+      "What is a Promise chain?"
+    ]
+  },
+  {
+    "id": 11,
+    "title": "Authentication & Authorization",
+    "content": "APIs often require authentication using API keys, OAuth, JWT tokens. Authorization controls what resources the user can access.",
+    "questions": [
+      "Difference between authentication and authorization?",
+      "How to use API keys?",
+      "What is JWT and how is it used?"
+    ]
+  },
+  {
+    "id": 12,
+    "title": "Rate Limiting & CORS",
+    "content": "Rate limiting restricts how many API requests a client can make in a given time. CORS (Cross-Origin Resource Sharing) controls which domains can access the API.",
+    "questions": [
+      "What is CORS and why is it needed?",
+      "How to handle CORS errors?",
+      "What is API rate limiting?"
+    ]
+  },
+  {
+    "id": 13,
+    "title": "REST API Testing Tools",
+    "content": "Tools like Postman, Insomnia, and curl help test API endpoints, send requests, and view responses.",
+    "questions": [
+      "What is Postman and how to use it?",
+      "Difference between manual testing and automated testing of APIs?",
+      "How to test GET, POST, PUT, DELETE requests?"
+    ]
+  },
+  {
+    "id": 14,
+    "title": "Versioning & Documentation",
+    "content": "APIs often have versions (v1, v2) to maintain backward compatibility. Documentation helps developers understand endpoints, parameters, and responses.",
+    "questions": [
+      "Why version an API?",
+      "What is OpenAPI/Swagger?",
+      "How to read API documentation?"
+    ]
+  },
+  {
+    "id": 15,
+    "title": "Advanced Web API Topics",
+    "content": "Advanced topics include GraphQL, WebSockets for real-time communication, API caching, pagination, rate limiting, and securing APIs.",
+    "questions": [
+      "What is GraphQL and how is it different from REST?",
+      "How to implement pagination in API responses?",
+      "What is API caching and why is it important?"
+    ]
+  },
+  {
+    "id": 16,
+    "title": "End-to-End Web API Guide",
+    "content": "This guide covers all aspects of Web APIs: fundamentals, HTTP methods, authentication, asynchronous JavaScript, testing, and advanced topics for real-world applications.",
+    "questions": [
+      "Create a REST API endpoint and fetch data using JavaScript.",
+      "Secure an API using JWT authentication.",
+      "Implement pagination and error handling in API responses."
     ]
   }
 ]

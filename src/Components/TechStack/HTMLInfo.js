@@ -53,7 +53,7 @@ function HTMLInfo() {
 
       <div className={`sidebar ${sidebarOpen ? 'open' : 'closed'}`}>
         <div className="sidebar-header">
-          <h3>HTML Topics</h3>
+          <h3 className='nav-title'>HTML Topics</h3>
           <div className="progress-info">
            <span style={{ padding: '12px', fontWeight: 'bold', color: '#667eea' }}>
   {completedTopics.size} / {topics.length} completed

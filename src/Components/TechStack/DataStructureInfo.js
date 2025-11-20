@@ -37,7 +37,7 @@ function DataStructureInfo() {
 
       <div className={`sidebar ${sidebarOpen ? 'open' : 'closed'}`}>
         <div className="sidebar-header">
-          <h3>Data Structures</h3>
+          <h3 className='nav-title'>Data Structure</h3>
           <div className="progress-info">
             <span style={{ padding: '12px', fontWeight: 'bold', color: '#667eea' }}>
               {completedTopics.size} / {topics.length} completed

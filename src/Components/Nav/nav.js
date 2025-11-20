@@ -1,16 +1,17 @@
-import React from 'react';
+import React, { useState } from 'react';
 import { Link } from 'react-router-dom';
 import {
-  Code2, Braces, Palette, FileCode, Server, FileType, GitBranch, Globe, Clock,
-  Database, Wrench, Zap, TestTube, Shield, Rocket, Link2, Bug, Star, Layers, Binary
+  Code2, Braces, Palette, FileCode, Server, FileType, GitBranch, Globe, TestTube,
+  Shield, Rocket, Link2, Binary, Database
 } from 'lucide-react';
 import './nav.css';
 
-function Nav() {
+function Navigation() {
+  const [isOpen, setIsOpen] = useState(false);
 
   const topics = [
     { name: 'React', icon: Code2, route: '/react-info' },
-    { name: 'JavaScript', icon: Braces, route: '/javascript-info' },
+    { name: 'JS', icon: Braces, route: '/javascript-info' },
     { name: 'CSS', icon: Palette, route: '/css-Info' },
     { name: 'HTML', icon: FileCode, route: '/html' },
     { name: 'Node.js', icon: Server, route: '/nodejs-info' },
@@ -28,12 +29,25 @@ function Nav() {
 
   return (
     <nav className="nav-container">
-      <ul className="nav-menu">
+      <div className="nav-header">
+        <a
+          className="nav-toggle"
+          onClick={() => setIsOpen(!isOpen)}
+        >
+          Tech Stack Topics...
+        </a>
+      </div>
+
+      <ul className={`nav-menu ${isOpen ? 'open' : ''}`}>
         {topics.map((topic, index) => {
           const Icon = topic.icon;
           return (
             <li key={index}>
-              <Link to={topic.route} className="nav-item">
+              <Link
+                to={topic.route}
+                className="nav-item"
+                onClick={() => setIsOpen(false)} // <-- closes menu on click
+              >
                 <Icon size={18} />
                 <span>{topic.name}</span>
               </Link>
@@ -45,4 +59,4 @@ function Nav() {
   );
 }
 
-export default Nav;
+export default Navigation;

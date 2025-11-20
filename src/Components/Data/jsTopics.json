@@ -1,29 +1,242 @@
 [
   {
     "id": 1,
-    "title": "Introduction to JavaScript",
-    "content": "JavaScript is a versatile programming language used for web development...",
+    "title": "Introduction",
+    "content": "JavaScript is a versatile programming language used for web development, allowing interactivity, dynamic content, and client-side behavior. It can run on browsers and servers (Node.js).",
     "questions": [
       "What is JavaScript?",
-      "Difference between var, let, and const?"
+      "Difference between JavaScript and Java?",
+      "Where can JavaScript run?"
     ]
   },
   {
     "id": 2,
     "title": "Variables and Data Types",
-    "content": "JavaScript supports several data types including string, number, boolean...",
+    "content": "JavaScript supports several data types including string, number, boolean, null, undefined, symbol, object, and BigInt. Variables can be declared using var, let, and const.",
     "questions": [
       "What are primitive data types in JavaScript?",
+      "Difference between var, let, and const?",
       "Explain type coercion in JavaScript."
     ]
   },
   {
     "id": 3,
-    "title": "Functions",
-    "content": "Functions are reusable blocks of code. JavaScript supports function declarations, expressions, and arrow functions...",
+    "title": "Operators",
+    "content": "JavaScript has arithmetic, comparison, logical, assignment, ternary, and bitwise operators. These operators help perform calculations and logical operations.",
     "questions": [
-      "What is the difference between function declaration and arrow function?",
+      "Explain arithmetic vs comparison operators.",
+      "How does the ternary operator work?",
+      "Difference between == and ===?"
+    ]
+  },
+  {
+    "id": 4,
+    "title": "Control Flow",
+    "content": "JavaScript uses conditional statements (if, else if, else, switch) and loops (for, while, do-while, for...of, for...in) to control execution flow.",
+    "questions": [
+      "Difference between for...in and for...of loops?",
+      "How does a switch statement work?",
+      "What is the difference between break and continue?"
+    ]
+  },
+  {
+    "id": 5,
+    "title": "Functions",
+    "content": "Functions are reusable blocks of code. JavaScript supports function declarations, function expressions, arrow functions, and higher-order functions.",
+    "questions": [
+      "Difference between function declaration and arrow function?",
+      "What are higher-order functions?",
       "Explain closures in JavaScript."
+    ]
+  },
+  {
+    "id": 6,
+    "title": "Arrays",
+    "content": "Arrays store ordered data. JS provides methods like push, pop, shift, unshift, map, filter, reduce, find, some, every, and sort to manipulate arrays.",
+    "questions": [
+      "How to add or remove elements from an array?",
+      "Difference between map, filter, and reduce?",
+      "Explain shallow vs deep copy of an array."
+    ]
+  },
+  {
+    "id": 7,
+    "title": "Objects",
+    "content": "Objects are key-value pairs. JS supports Object.keys, Object.values, Object.entries, and methods for cloning, merging, and destructuring objects.",
+    "questions": [
+      "How to access object properties?",
+      "Difference between dot notation and bracket notation?",
+      "Explain object destructuring with an example."
+    ]
+  },
+  {
+    "id": 8,
+    "title": "Scope and Hoisting",
+    "content": "JavaScript has global, function, and block scopes. Variables declared with var are function-scoped and hoisted; let and const are block-scoped and hoisted but cannot be accessed before declaration (Temporal Dead Zone).",
+    "questions": [
+      "What is the difference between function scope and block scope?",
+      "Explain hoisting in JavaScript.",
+      "What is the Temporal Dead Zone?"
+    ]
+  },
+  {
+    "id": 9,
+    "title": "Closures",
+    "content": "A closure is a function that remembers variables from its outer scope even after the outer function has finished execution. Closures are used for data privacy and maintaining state.",
+    "questions": [
+      "What is a closure in JavaScript?",
+      "Give an example of a closure.",
+      "Why are closures useful?"
+    ]
+  },
+  {
+    "id": 10,
+    "title": "Prototypes and Inheritance",
+    "content": "JavaScript uses prototypal inheritance. Objects inherit properties and methods from other objects via their prototype. Every object has a __proto__ property pointing to its prototype.",
+    "questions": [
+      "What is prototypal inheritance?",
+      "How to create an object with a specific prototype?",
+      "Difference between prototype and __proto__."
+    ]
+  },
+  {
+    "id": 11,
+    "title": "Classes",
+    "content": "ES6 classes provide syntactic sugar over JavaScript's prototypal inheritance. Classes can have constructors, methods, and static properties.",
+    "questions": [
+      "How to define a class in JavaScript?",
+      "Difference between class and constructor function?",
+      "What is a static method in a class?"
+    ]
+  },
+  {
+    "id": 12,
+    "title": "Event Loop & Call Stack",
+    "content": "JavaScript is single-threaded and uses an event loop to handle asynchronous operations. The call stack keeps track of function execution, and the event loop manages the task queue for asynchronous callbacks.",
+    "questions": [
+      "Explain how the event loop works.",
+      "Difference between call stack and task queue.",
+      "What happens when multiple setTimeout callbacks are scheduled?"
+    ]
+  },
+  {
+    "id": 13,
+    "title": "Asynchronous JavaScript: Callbacks, Promises, Async/Await",
+    "content": "JS handles async operations using callbacks, Promises, and async/await. Promises represent future values. Async/await provides cleaner syntax for async code.",
+    "questions": [
+      "Difference between callbacks and Promises?",
+      "How to use async/await with try/catch?",
+      "What is Promise.all and when to use it?"
+    ]
+  },
+  {
+    "id": 14,
+    "title": "Modules and Import/Export",
+    "content": "JavaScript modules (ES6) allow splitting code into reusable files. Modules can export functions, objects, or values, and other files can import them using import syntax.",
+    "questions": [
+      "Difference between default and named exports?",
+      "What is a JavaScript module?",
+      "Why use modules in large applications?"
+    ]
+  },
+  {
+    "id": 15,
+    "title": "DOM Manipulation",
+    "content": "Document Object Model (DOM) represents HTML elements as objects. JS can manipulate DOM using methods like getElementById, querySelector, createElement, appendChild, and event listeners.",
+    "questions": [
+      "How to select DOM elements in JavaScript?",
+      "Difference between innerHTML and textContent?",
+      "How to add event listeners dynamically?"
+    ]
+  },
+  {
+    "id": 16,
+    "title": "Event Handling",
+    "content": "JavaScript allows responding to user actions using events. Events include click, input, mouseover, submit, keypress, and custom events.",
+    "questions": [
+      "How to attach an event listener to an element?",
+      "Difference between event bubbling and capturing?",
+      "What is event delegation?"
+    ]
+  },
+  {
+    "id": 17,
+    "title": "Web Storage",
+    "content": "LocalStorage and SessionStorage store key-value pairs in the browser. LocalStorage persists across sessions, SessionStorage clears on tab close. Both are synchronous APIs.",
+    "questions": [
+      "Difference between LocalStorage and SessionStorage?",
+      "How to set, get, and remove items in LocalStorage?",
+      "What are the limitations of web storage?"
+    ]
+  },
+  {
+    "id": 18,
+    "title": "Fetch API and AJAX",
+    "content": "Fetch API allows asynchronous HTTP requests to servers. AJAX (Asynchronous JavaScript and XML) is the older technique to fetch data without page reload. Fetch returns Promises.",
+    "questions": [
+      "How to fetch data from an API using fetch?",
+      "Difference between fetch and XMLHttpRequest?",
+      "How to handle fetch errors?"
+    ]
+  },
+  {
+    "id": 19,
+    "title": "Error Handling",
+    "content": "JS uses try/catch/finally blocks to handle exceptions. Error objects have name, message, and stack properties. Custom errors can be created by extending the Error class.",
+    "questions": [
+      "How to catch errors in JavaScript?",
+      "Difference between throw and return in error handling?",
+      "How to create a custom error class?"
+    ]
+  },
+  {
+    "id": 20,
+    "title": "Regular Expressions",
+    "content": "Regular expressions (RegEx) are patterns used to match strings. JS supports RegExp objects and methods like test(), match(), replace(), and search().",
+    "questions": [
+      "How to create a RegExp in JavaScript?",
+      "What does test() method do?",
+      "Give an example of replacing text using RegEx."
+    ]
+  },
+  {
+    "id": 21,
+    "title": "Memory Management and Garbage Collection",
+    "content": "JS automatically manages memory allocation and garbage collection. Unused objects are removed from memory. Closures and global variables may cause memory leaks if not handled properly.",
+    "questions": [
+      "How does garbage collection work in JavaScript?",
+      "What causes memory leaks?",
+      "How to prevent memory leaks in JS?"
+    ]
+  },
+  {
+    "id": 22,
+    "title": "JavaScript Design Patterns",
+    "content": "Common JS design patterns include Module, Singleton, Observer, Factory, and Revealing Module patterns. These help write maintainable and scalable code.",
+    "questions": [
+      "What is the Module pattern in JavaScript?",
+      "Explain the Singleton pattern with an example.",
+      "How does the Observer pattern work in JS?"
+    ]
+  },
+  {
+    "id": 23,
+    "title": "Advanced Array & Object Methods",
+    "content": "JS provides advanced methods like map, filter, reduce, find, some, every for arrays, and Object.keys(), Object.values(), Object.entries(), Object.assign() for objects.",
+    "questions": [
+      "Difference between map, forEach, and reduce?",
+      "How to iterate over object properties?",
+      "What is the difference between Object.keys and Object.entries?"
+    ]
+  },
+  {
+    "id": 24,
+    "title": "End-to-End JavaScript Guide",
+    "content": "This JSON covers all JavaScript topics from beginner to advanced, including variables, functions, arrays, objects, closures, async JS, classes, DOM manipulation, web storage, fetch API, and design patterns. Use it as a full learning reference.",
+    "questions": [
+      "Review all JavaScript topics and practice coding examples.",
+      "Build a project combining multiple JS features.",
+      "Explain closures, async/await, and prototypal inheritance in your own words."
     ]
   }
 ]

@@ -2,28 +2,171 @@
   {
     "id": 1,
     "title": "Introduction to CSS",
-    "content": "CSS (Cascading Style Sheets) is used to style HTML elements, control layout, colors, fonts, and more.",
+    "content": "CSS (Cascading Style Sheets) is used to style HTML elements. It controls layout, colors, fonts, spacing, and responsive design.",
     "questions": [
-      "What is the difference between inline, internal, and external CSS?",
-      "Explain the concept of specificity in CSS."
+      "What is CSS?",
+      "Difference between inline, internal, and external CSS?",
+      "What are selectors in CSS?"
     ]
   },
   {
     "id": 2,
-    "title": "Selectors",
-    "content": "CSS selectors are patterns used to select the HTML elements you want to style. They include class, id, pseudo-classes, and more.",
+    "title": "CSS Syntax and Selectors",
+    "content": "CSS syntax consists of a selector and a declaration block. Selectors target HTML elements. Declarations include property and value pairs.",
     "questions": [
-      "What is the difference between class selector and id selector?",
-      "What are pseudo-classes? Give examples."
+      "Explain CSS syntax.",
+      "Difference between class and ID selectors?",
+      "What are pseudo-classes and pseudo-elements?"
     ]
   },
   {
     "id": 3,
-    "title": "Box Model",
-    "content": "Every HTML element is a rectangular box. The box model consists of content, padding, border, and margin.",
+    "title": "CSS Colors and Backgrounds",
+    "content": "CSS supports color names, hex, RGB, RGBA, HSL, and HSLA. Backgrounds can use color, images, gradients, repeat, position, and size.",
+    "questions": [
+      "Difference between RGB and RGBA?",
+      "How to add a gradient background?",
+      "How to position a background image?"
+    ]
+  },
+  {
+    "id": 4,
+    "title": "CSS Text and Fonts",
+    "content": "CSS controls text using font-family, font-size, font-weight, font-style, text-align, text-decoration, text-transform, letter-spacing, and line-height.",
+    "questions": [
+      "Difference between serif and sans-serif fonts?",
+      "How to capitalize text using CSS?",
+      "What is the difference between letter-spacing and word-spacing?"
+    ]
+  },
+  {
+    "id": 5,
+    "title": "CSS Box Model",
+    "content": "All elements in CSS follow the box model: content, padding, border, and margin. box-sizing controls how width and height are calculated.",
     "questions": [
       "Explain the CSS box model.",
-      "How does box-sizing affect element dimensions?"
+      "Difference between content-box and border-box?",
+      "How to add spacing between elements using margin?"
+    ]
+  },
+  {
+    "id": 6,
+    "title": "CSS Display and Positioning",
+    "content": "Display determines how elements are rendered: block, inline, inline-block, flex, grid, none. Position controls placement: static, relative, absolute, fixed, sticky.",
+    "questions": [
+      "Difference between block and inline elements?",
+      "Explain relative vs absolute positioning.",
+      "What does display: none do?"
+    ]
+  },
+  {
+    "id": 7,
+    "title": "CSS Flexbox",
+    "content": "Flexbox is a one-dimensional layout system. Properties include display: flex, flex-direction, justify-content, align-items, align-self, flex-wrap, and gap.",
+    "questions": [
+      "Difference between justify-content and align-items?",
+      "How to reverse the flex direction?",
+      "What is the use of flex-wrap?"
+    ]
+  },
+  {
+    "id": 8,
+    "title": "CSS Grid",
+    "content": "CSS Grid is a two-dimensional layout system. Properties include display: grid, grid-template-columns, grid-template-rows, grid-gap, grid-area, justify-items, and align-items.",
+    "questions": [
+      "Difference between Flexbox and Grid?",
+      "How to create a 3x3 grid layout?",
+      "Explain grid-template-areas."
+    ]
+  },
+  {
+    "id": 9,
+    "title": "CSS Pseudo-classes and Pseudo-elements",
+    "content": "Pseudo-classes define element states (:hover, :focus, :nth-child), pseudo-elements style parts of elements (::before, ::after, ::first-letter).",
+    "questions": [
+      "Difference between pseudo-class and pseudo-element?",
+      "How to style every even child?",
+      "What does ::before do?"
+    ]
+  },
+  {
+    "id": 10,
+    "title": "CSS Transitions and Animations",
+    "content": "Transitions create smooth changes for properties. Animations define keyframes and control duration, timing-function, delay, and iteration-count.",
+    "questions": [
+      "Difference between transition and animation?",
+      "How to create a hover transition effect?",
+      "Explain @keyframes in CSS animations."
+    ]
+  },
+  {
+    "id": 11,
+    "title": "CSS Transformations",
+    "content": "CSS transforms include translate, rotate, scale, skew, and matrix. Transforms can be applied in 2D or 3D for visual effects.",
+    "questions": [
+      "Difference between translate and rotate?",
+      "How to scale an element on hover?",
+      "What is a 3D transform?"
+    ]
+  },
+  {
+    "id": 12,
+    "title": "CSS Media Queries",
+    "content": "Media queries allow responsive design. Syntax: @media (condition) { CSS rules }. Conditions include max-width, min-width, orientation, and resolution.",
+    "questions": [
+      "How to make a website responsive using media queries?",
+      "Difference between max-width and min-width?",
+      "How to target landscape and portrait orientations?"
+    ]
+  },
+  {
+    "id": 13,
+    "title": "CSS Variables",
+    "content": "CSS variables (--var-name) store reusable values. Use var(--var-name) to access. Variables can be global (:root) or scoped to elements.",
+    "questions": [
+      "How to declare and use a CSS variable?",
+      "Difference between global and local CSS variables?",
+      "Can variables be updated dynamically?"
+    ]
+  },
+  {
+    "id": 14,
+    "title": "CSS Specificity and Inheritance",
+    "content": "CSS rules are applied based on specificity: inline > ID > class > element. Inheritance allows child elements to take parent properties.",
+    "questions": [
+      "Explain CSS specificity.",
+      "Which has higher priority: ID or class?",
+      "Do all properties inherit by default?"
+    ]
+  },
+  {
+    "id": 15,
+    "title": "CSS Z-Index and Stacking Context",
+    "content": "Z-index controls the stacking order of positioned elements. Stacking context determines how elements are layered. Only positioned elements (relative, absolute, fixed, sticky) use z-index.",
+    "questions": [
+      "How does z-index work?",
+      "What is stacking context?",
+      "Can z-index work on static elements?"
+    ]
+  },
+  {
+    "id": 16,
+    "title": "CSS Best Practices",
+    "content": "Write clean, maintainable CSS using semantic class names, modular styles, avoid !important, use variables, and leverage Flexbox/Grid for layouts.",
+    "questions": [
+      "Why avoid using !important in CSS?",
+      "What are the advantages of using CSS variables?",
+      "Why prefer Flexbox/Grid over floats?"
+    ]
+  },
+  {
+    "id": 17,
+    "title": "End-to-End CSS Guide",
+    "content": "This JSON covers CSS from beginner to advanced topics including selectors, styling, box model, layout, animations, transformations, media queries, variables, and best practices.",
+    "questions": [
+      "Review all CSS topics and practice examples.",
+      "Create a responsive layout combining Flexbox and Grid.",
+      "Use CSS transitions, animations, and pseudo-classes in a project."
     ]
   }
 ]

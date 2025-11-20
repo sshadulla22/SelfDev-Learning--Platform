@@ -2,46 +2,171 @@
   {
     "id": 1,
     "title": "Introduction to TypeScript",
-    "content": "TypeScript is a strongly typed superset of JavaScript that compiles to plain JavaScript. It offers static typing, classes, interfaces, and other features to enhance JS development.",
+    "content": "TypeScript is a strongly typed superset of JavaScript that compiles to plain JavaScript. It adds optional static typing, interfaces, and advanced tooling support.",
     "questions": [
-      "What is TypeScript and how is it different from JavaScript?",
-      "What are the benefits of using TypeScript in large projects?"
+      "What is TypeScript?",
+      "Difference between JavaScript and TypeScript?",
+      "Why use TypeScript in large projects?"
     ]
   },
   {
     "id": 2,
-    "title": "Type Annotations",
-    "content": "Type annotations allow developers to define the type of variables, function parameters, and return values. This helps catch errors at compile time.",
+    "title": "TypeScript Basic Types",
+    "content": "TypeScript provides types like number, string, boolean, array, tuple, enum, any, unknown, void, null, undefined, and never.",
     "questions": [
-      "How do you declare a variable with a type in TypeScript?",
-      "What types can be used in TypeScript?"
+      "What is the difference between 'any' and 'unknown'?",
+      "Explain tuples in TypeScript.",
+      "What is the 'never' type used for?"
     ]
   },
   {
     "id": 3,
-    "title": "Interfaces",
-    "content": "Interfaces define the structure of objects and ensure that objects conform to a particular shape, making code more predictable.",
+    "title": "Type Inference & Type Annotations",
+    "content": "TypeScript can infer types automatically, but explicit type annotations help improve code readability and catch errors early.",
     "questions": [
-      "How do you define an interface in TypeScript?",
-      "Can an interface extend another interface?"
+      "What is type inference in TypeScript?",
+      "How to explicitly annotate types for variables, functions, and objects?",
+      "What happens if TypeScript cannot infer a type?"
     ]
   },
   {
     "id": 4,
-    "title": "Classes",
-    "content": "TypeScript classes are similar to ES6 classes but support access modifiers (public, private, protected) and other OOP features.",
+    "title": "Functions in TypeScript",
+    "content": "TypeScript allows typing for function parameters, return types, and supports optional and default parameters.",
     "questions": [
-      "How do you declare a class in TypeScript?",
-      "What are the access modifiers in TypeScript classes?"
+      "How to define function parameter types?",
+      "How to define return type of a function?",
+      "What are optional and default parameters?"
     ]
   },
   {
     "id": 5,
-    "title": "Generics",
-    "content": "Generics allow you to write reusable components that work with different types without losing type safety.",
+    "title": "Interfaces",
+    "content": "Interfaces define the shape of objects, enforce contracts, and enable better code organization. Classes can implement interfaces.",
     "questions": [
-      "What is a generic in TypeScript?",
-      "How do you define a generic function or class?"
+      "What is an interface?",
+      "Difference between type and interface?",
+      "How do classes implement interfaces?"
+    ]
+  },
+  {
+    "id": 6,
+    "title": "Classes & Object-Oriented Programming",
+    "content": "TypeScript supports classes, inheritance, access modifiers (public, private, protected), abstract classes, and static members.",
+    "questions": [
+      "How to define a class in TypeScript?",
+      "What are access modifiers?",
+      "Difference between abstract class and interface?"
+    ]
+  },
+  {
+    "id": 7,
+    "title": "Generics",
+    "content": "Generics allow creating reusable components and functions that work with different data types while preserving type safety.",
+    "questions": [
+      "What are generics in TypeScript?",
+      "How to create a generic function or class?",
+      "What is the difference between generic and any?"
+    ]
+  },
+  {
+    "id": 8,
+    "title": "Type Aliases & Union/Intersection Types",
+    "content": "Type aliases create custom types. Union types allow multiple possible types, intersection types combine multiple types.",
+    "questions": [
+      "What is a type alias?",
+      "Difference between union and intersection types?",
+      "How to use union types in function parameters?"
+    ]
+  },
+  {
+    "id": 9,
+    "title": "Enums",
+    "content": "Enums define a set of named constants (numeric or string) to make code more readable and maintainable.",
+    "questions": [
+      "What is an enum?",
+      "Difference between numeric and string enums?",
+      "How to use enums in TypeScript?"
+    ]
+  },
+  {
+    "id": 10,
+    "title": "Type Assertions & Type Casting",
+    "content": "Type assertions tell the compiler to treat a value as a specific type without changing its runtime behavior.",
+    "questions": [
+      "What is type assertion?",
+      "Difference between 'as' syntax and angle-bracket syntax?",
+      "When should you use type assertions?"
+    ]
+  },
+  {
+    "id": 11,
+    "title": "Modules & Namespaces",
+    "content": "Modules in TypeScript help organize code into separate files. Namespaces group related functionality in a single file.",
+    "questions": [
+      "Difference between modules and namespaces?",
+      "How to export and import modules?",
+      "Why use modules over namespaces?"
+    ]
+  },
+  {
+    "id": 12,
+    "title": "Decorators",
+    "content": "Decorators are special declarations attached to classes, methods, or properties, used for metadata or modifying behavior. Requires 'experimentalDecorators' flag.",
+    "questions": [
+      "What are decorators?",
+      "How to create a class decorator?",
+      "Use cases of decorators in TypeScript?"
+    ]
+  },
+  {
+    "id": 13,
+    "title": "Advanced Types",
+    "content": "TypeScript supports advanced types like conditional types, mapped types, template literal types, and utility types (Partial, Pick, Omit).",
+    "questions": [
+      "What are conditional types?",
+      "Explain mapped types.",
+      "What are utility types like Partial, Pick, and Omit?"
+    ]
+  },
+  {
+    "id": 14,
+    "title": "TypeScript with React",
+    "content": "TypeScript can be used in React for typing props, state, events, and hooks to improve reliability and editor support.",
+    "questions": [
+      "How to type React props and state?",
+      "How to type useState and useRef hooks?",
+      "How to create generic components in React + TypeScript?"
+    ]
+  },
+  {
+    "id": 15,
+    "title": "TypeScript with Node.js",
+    "content": "TypeScript can be used for Node.js backend projects, enabling type safety for APIs, database queries, and middleware.",
+    "questions": [
+      "How to setup TypeScript in a Node.js project?",
+      "How to type Express request and response objects?",
+      "How to use TypeORM or Mongoose with TypeScript?"
+    ]
+  },
+  {
+    "id": 16,
+    "title": "TypeScript Advanced Tips",
+    "content": "Advanced topics include type guards, conditional types, declaration files (.d.ts), ambient types, and integrating with third-party JS libraries.",
+    "questions": [
+      "What are type guards?",
+      "How to create declaration files for JS libraries?",
+      "What are ambient types in TypeScript?"
+    ]
+  },
+  {
+    "id": 17,
+    "title": "End-to-End TypeScript Guide",
+    "content": "This JSON covers TypeScript from basic types, functions, classes, interfaces, generics, modules, decorators, React & Node integration to advanced types.",
+    "questions": [
+      "Create a class with generics and interfaces.",
+      "Build a typed REST API using TypeScript + Express.",
+      "Implement type-safe React components with props and state."
     ]
   }
 ]

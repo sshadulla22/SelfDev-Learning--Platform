@@ -42,7 +42,7 @@ function WebAPIInfo() {
 
       <div className={`sidebar ${sidebarOpen ? 'open' : 'closed'}`}>
         <div className="sidebar-header">
-          <h3>Web API Topics</h3>
+          <h3 className='nav-title'>Web API Topics</h3>
           <div className="progress-info">
             <span style={{ padding: '12px', fontWeight: 'bold', color: '#00bcd4' }}>
               {completedTopics.size} / {topics.length} completed

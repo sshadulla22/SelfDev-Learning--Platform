@@ -1,0 +1,146 @@
+{
+  "reactHooks": [
+    {
+      "name": "useState",
+      "purpose": "Manage state in functional components.",
+      "example": "const [count, setCount] = useState(0);\n<button onClick={() => setCount(count + 1)}>Increment</button>",
+      "tips": [
+        "Use functional updates when new state depends on previous state.",
+        "You can have multiple useState calls for different values."
+      ],
+      "commonMistakes": [
+        "Mutating state directly instead of using setState.",
+        "Forgetting that state updates are asynchronous."
+      ]
+    },
+    {
+      "name": "useEffect",
+      "purpose": "Handle side effects like fetching data, subscriptions, or timers.",
+      "example": "useEffect(() => {\n  fetch('https://api.example.com/data')\n    .then(res => res.json())\n    .then(data => setData(data));\n}, []);",
+      "tips": [
+        "Empty dependency array [] → runs only once on mount.",
+        "Always clean up subscriptions, timers, etc."
+      ],
+      "commonMistakes": [
+        "Forgetting dependencies → stale closures.",
+        "Adding too many dependencies → infinite loops."
+      ]
+    },
+    {
+      "name": "useContext",
+      "purpose": "Access values from React Context without prop drilling.",
+      "example": "const theme = useContext(ThemeContext);\n<button className={theme}>I'm {theme} themed!</button>",
+      "tips": [
+        "Component re-renders when context value changes.",
+        "Use multiple contexts for different global states."
+      ],
+      "commonMistakes": [
+        "Creating new object/array values in Provider each render → unnecessary re-renders.",
+        "Overusing context when props suffice."
+      ]
+    },
+    {
+      "name": "useReducer",
+      "purpose": "Manage complex state with a reducer.",
+      "example": "const [state, dispatch] = useReducer(reducer, { count: 0 });\n<button onClick={() => dispatch({ type: 'increment' })}>+</button>",
+      "tips": [
+        "Better than useState for complex logic.",
+        "Reducer should be pure (no side effects)."
+      ],
+      "commonMistakes": [
+        "Mutating state in reducer.",
+        "Performing side effects in reducer."
+      ]
+    },
+    {
+      "name": "useRef",
+      "purpose": "Persist mutable values and access DOM elements.",
+      "example": "const inputRef = useRef(null);\n<input ref={inputRef} />\n<button onClick={() => inputRef.current.focus()}>Focus Input</button>",
+      "tips": [
+        "Use for DOM access or storing timers, intervals, previous values.",
+        ".current updates don’t trigger re-renders."
+      ],
+      "commonMistakes": [
+        "Accessing ref.current before render.",
+        "Using useRef when state is needed."
+      ]
+    },
+    {
+      "name": "useMemo",
+      "purpose": "Memoize expensive calculations.",
+      "example": "const filteredProducts = useMemo(() => products.filter(p => p.name.includes(filter)), [products, filter]);",
+      "tips": [
+        "Use only for expensive calculations.",
+        "Helps prevent unnecessary child re-renders."
+      ],
+      "commonMistakes": [
+        "Overusing for simple calculations.",
+        "Forgetting dependencies."
+      ]
+    },
+    {
+      "name": "useCallback",
+      "purpose": "Memoize callback functions to avoid re-creating them every render.",
+      "example": "const increment = useCallback(() => setCount(c => c + 1), []);",
+      "tips": [
+        "Use with React.memo for child components.",
+        "Only optimize when necessary."
+      ],
+      "commonMistakes": [
+        "Using without React.memo → no performance gain.",
+        "Including unnecessary dependencies."
+      ]
+    },
+    {
+      "name": "useLayoutEffect",
+      "purpose": "Runs synchronously after DOM mutations but before painting.",
+      "example": "useLayoutEffect(() => { const rect = ref.current.getBoundingClientRect(); }, []);",
+      "tips": [
+        "Prefer useEffect unless you need layout measurements.",
+        "Can prevent visual flicker."
+      ],
+      "commonMistakes": [
+        "Using when useEffect suffices.",
+        "Blocking painting with expensive operations."
+      ]
+    },
+    {
+      "name": "useDebugValue",
+      "purpose": "Display custom debugging information for custom hooks in React DevTools.",
+      "example": "useDebugValue(data ? `Data loaded: ${data.length} items` : 'Loading...');",
+      "tips": [
+        "Useful for debugging custom hooks.",
+        "Should not affect hook behavior."
+      ],
+      "commonMistakes": [
+        "Using it in production for logic instead of debugging."
+      ]
+    },
+    {
+      "name": "useImperativeHandle",
+      "purpose": "Customize the instance value exposed to parent components when using ref.",
+      "example": "useImperativeHandle(ref, () => ({ focus: () => inputRef.current.focus() }));",
+      "tips": [
+        "Expose only what parent needs.",
+        "Useful with forwardRef."
+      ],
+      "commonMistakes": [
+        "Exposing internal implementation unnecessarily.",
+        "Not using forwardRef with it."
+      ]
+    },
+    {
+      "name": "Custom Hooks",
+      "purpose": "Reuse stateful logic across components.",
+      "example": "function useInput(initialValue) { const [value, setValue] = useState(initialValue); return [value, e => setValue(e.target.value)]; }",
+      "tips": [
+        "Always start name with 'use'.",
+        "Great for sharing logic between components."
+      ],
+      "commonMistakes": [
+        "Not starting with 'use' → breaks rules.",
+        "Making hook too specific → hard to reuse."
+      ]
+    }
+  ]
+}

@@ -1,68 +1,92 @@
 .nav-container {
   width: 100%;
   background: #000;
-  padding-bottom:0 ;
-  padding-top: 16px;
-  padding-left: 6px;
-  display: flex;
-  align-items: center;         /* Perfect vertical alignment */
+  padding: 6px 10px;
   border-bottom: 1px dashed #0f0;
   position: sticky;
   top: 0;
-  z-index: 999;
+  z-index: 200;
 }
 
+/* Header: Logo + Toggler */
+.nav-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
 
-/* Logo */
 .nav-logo {
   font-size: 22px;
   font-weight: 700;
   color: #10b981;
+
+  text-decoration: none;
 }
 
-/* Menu */
+/* Toggler button */
+.nav-toggle {
+border: none;
+  font-size: 24px;
+  color: #10b981;
+  background: black;
+  border: none;
+  cursor: pointer;
+  display: none; /* hide on desktop */
+}
+
 .nav-menu {
   display: flex;
+  margin: 3px;
+  font-size: small;
   list-style: none;
-  gap: 2px;
+  gap: 10px;
+  justify-content: center;
+  ;
 }
 
-/* Menu Item */
+
 .nav-item {
-  display: grid;
-  grid-template-columns: 20px 1fr; /* icon + text */
+  display: flex;
   align-items: center;
-  border-right: 1px dashed #0f0;
-  padding: 6px 10px;
+  font-size: smaller;
+  gap: 8px;
+  padding: 8px 12px;
   color: #e0e0e0;
   text-decoration: none;
-  font-size: 14px;
-  gap: 8px;                        /* spacing between icon and text */
+  background-color: rgb(15, 15, 15);
+  border-radius: 4px;
+
   transition: all 0.3s ease;
-  cursor: pointer;
 }
 
 .nav-item:hover {
-  background-color:#10b981 ; /* subtle green on hover */
-  color: #4ade80;
+  background-color: #000000;
+  color: #000;
 }
 
-/* Active menu item - always visible */
 .nav-item.active {
-  background-color: #10b981;  /* bright green background */
-  color: #000000;              /* black text for contrast */
+  background-color: #10b981;
+  color: #000;
   font-weight: 600;
 }
 
 /* Responsive */
 @media (max-width: 768px) {
-  .nav-container {
-    flex-direction: column;
-    gap: 10px;
+  .nav-toggle {
+    display: block; /* show toggler button */
+    cursor: pointer;
   }
 
   .nav-menu {
-    flex-wrap: wrap;
-    justify-content: center;
+    display: none;      /* hide menu by default */
+    flex-direction: column; /* stack items vertically */
+    list-style: none;
+    margin-top: 10px;
+    gap: 6px;
+  }
+
+  .nav-menu.open {
+    display: flex;      /* show menu when toggler clicked */
   }
 }
+
