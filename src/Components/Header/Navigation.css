@@ -11,18 +11,18 @@
   display: flex;
   justify-content: space-between;
   align-items: center;
-  background: #000;
+  background: #0A0A0A;
   padding: 10px 20px;
   position: sticky;
   top: 0;
   z-index: 999;
   color: #fff;
-  border-bottom: 1px dashed #0f0;
+  border-bottom: 1px solid #ffffff;
 }
 
 /* Logo */
 .nav-logo a {
-  color: #10b981;
+  color: #ffffff;
   text-decoration: none;
   margin-left: 40px;
   font-size: 1.5rem;
@@ -43,7 +43,7 @@
 }
 
 .nav-links li a:hover {
-  color: #10b981;
+  color: #ffffff;
 }
 
 /* Hamburger (mobile) */
@@ -51,7 +51,7 @@
   display: none;
   font-size: 28px;
   cursor: pointer;
-  color: #10b981;
+  color: #ffffff;
 }
 
 /* Responsive: mobile */
@@ -62,7 +62,7 @@
 
 /* Logo */
 .nav-logo a {
-  color: #10b981;
+  color: #ffffff;
   text-decoration: none;
   font-size: 1.5rem;
   margin-left: 45px;

@@ -1,11 +1,12 @@
 .nav-container {
   width: 100%;
-  background: #000;
+  background: #0A0A0A;
   padding: 6px 10px;
-  border-bottom: 1px dashed #0f0;
+  border-bottom: 1px solid #ffffff;
   position: sticky;
   top: 0;
   z-index: 200;
+   /* border-right: 1px solid #ffffff; */
 }
 
 /* Header: Logo + Toggler */
@@ -27,7 +28,7 @@
 .nav-toggle {
 border: none;
   font-size: 24px;
-  color: #10b981;
+  color: #ffffff;
   background: black;
   border: none;
   cursor: pointer;
@@ -40,7 +41,7 @@ border: none;
   font-size: small;
   list-style: none;
   gap: 10px;
-  justify-content: center;
+  justify-content: start;
   ;
 }
 
@@ -54,7 +55,7 @@ border: none;
   padding: 6px 10px;
   color: #e0e0e0;
   text-decoration: none;
-  background-color: rgb(15, 15, 15);
+  background-color: rgb(22, 21, 21);
   border-radius: 4px;
 
   transition: all 0.3s ease;
@@ -66,7 +67,7 @@ border: none;
 }
 
 .nav-item.active {
-  background-color: #10b981;
+  background-color: #ffffff;
   color: #000;
   font-weight: 600;
 }
