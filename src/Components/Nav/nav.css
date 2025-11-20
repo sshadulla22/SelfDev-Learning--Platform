@@ -48,14 +48,10 @@ border: none;
 .nav-item {
   display: flex;
   align-items: center;
-<<<<<<< HEAD
   font-size: smaller;
   gap: 8px;
   padding: 8px 12px;
-=======
-  border: 1px dashed #0f0;
   padding: 6px 10px;
->>>>>>> 1e548bc47b3fefbe07320b64b2acbb7324b7e56b
   color: #e0e0e0;
   text-decoration: none;
   background-color: rgb(15, 15, 15);
