@@ -1,6 +1,7 @@
 import './App.css';
 import { BrowserRouter as Router, Routes, Route } from 'react-router-dom';
 import Nav from './Components/Nav/nav.js';
+import Footer from './Components/Footer/footerComp.js';
 
 import Navigation from './Components/Header/Navigation.js';
 // Tech Stack Components
@@ -46,6 +47,7 @@ function App() {
           <Route path="/databases" element={<DatabaseInfo />} />
           <Route path="/hooks" element={<ReactHooks />} />
         </Routes>
+        {/* <Footer/> */}
       </div>
     </Router>
   );
