@@ -1,15 +1,14 @@
 .nav-container {
   width: 100%;
-  background: #0A0A0A;
+  background: var(--nav-bg);
   padding: 6px 10px;
-  border-bottom: 1px solid #ffffff;
+  border-top: 1px solid var(--border-color);
+  border-bottom: 1px solid var(--border-color2);
   position: sticky;
   top: 0;
   z-index: 200;
-   /* border-right: 1px solid #ffffff; */
 }
 
-/* Header: Logo + Toggler */
 .nav-header {
   display: flex;
   justify-content: space-between;
@@ -19,18 +18,16 @@
 .nav-logo {
   font-size: 22px;
   font-weight: 700;
-  color: #10b981;
-
+  color: var(--highlight-color);
   text-decoration: none;
 }
 
 /* Toggler button */
 .nav-toggle {
-border: none;
-  font-size: 24px;
-  color: #ffffff;
-  background: black;
   border: none;
+  font-size: 24px;
+  color: var(--nav-text);
+  background: var(--nav-bg);
   cursor: pointer;
   display: none; /* hide on desktop */
 }
@@ -42,53 +39,48 @@ border: none;
   list-style: none;
   gap: 10px;
   justify-content: start;
-  ;
 }
-
 
 .nav-item {
   display: flex;
   align-items: center;
   font-size: smaller;
   gap: 8px;
-  padding: 8px 12px;
   padding: 6px 10px;
-  color: #e0e0e0;
+  color: var(--nav-text);
   text-decoration: none;
-  background-color: rgb(22, 21, 21);
+  background-color: var(--card-bg);
   border-radius: 4px;
-
   transition: all 0.3s ease;
 }
 
 .nav-item:hover {
-  background-color: #000000;
-  color: #000;
+  color: var(--btn-text);
+  text-decoration: none;
 }
 
 .nav-item.active {
-  background-color: #ffffff;
-  color: #000;
+  background-color: var(--btn-bg);
+  color: var(--btn-textw);
   font-weight: 600;
 }
 
 /* Responsive */
 @media (max-width: 768px) {
   .nav-toggle {
-    display: block; /* show toggler button */
+    display: block;
     cursor: pointer;
   }
 
   .nav-menu {
-    display: none;      /* hide menu by default */
-    flex-direction: column; /* stack items vertically */
+    display: none;
+    flex-direction: column;
     list-style: none;
     margin-top: 10px;
     gap: 6px;
   }
 
   .nav-menu.open {
-    display: flex;      /* show menu when toggler clicked */
+    display: flex;
   }
 }
-

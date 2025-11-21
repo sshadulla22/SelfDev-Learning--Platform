@@ -1,6 +1,7 @@
 import React, { useState } from "react";
 import { Link } from "react-router-dom";
 import "./Navigation.css";
+import ThemeToggle from "../ThemeToggle";
 
 function Navigation() {
   const [isOpen, setIsOpen] = useState(false);
@@ -12,7 +13,9 @@ function Navigation() {
   return (
     <nav className="navbar">
       <div className="nav-logo">
-        <Link to="/">selfDev</Link>
+        <Link to="">selfDev</Link>
+        <ThemeToggle />
+
       </div>
 
       <div className="hamburger" onClick={toggleMenu}>

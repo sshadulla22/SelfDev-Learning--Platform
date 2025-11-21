@@ -102,11 +102,12 @@ function ReactInfo() {
       {/* Main Content */}
       <div className="main-content">
         <div className="content-header">
-          <h2 className="content-title">
-            <FaReact size={40} color={sidebarOpen ? "#667eea" : "#4ade80"} />
-            <span className="topic-badge">{selectedTopic.id}.</span>
-            {selectedTopic.title}
-          </h2>
+         <h2 className="content-title" style={{ display: "flex", alignItems: "center", gap: "10px" }}>
+  <FaReact size={30} /> {/* No margin needed, gap handles spacing */}
+  <span className="topic-badge">{selectedTopic.id}.</span>
+  <span>{selectedTopic.title}</span>
+</h2>
+
 
           {/* Button to go to Hooks Page */}
           <button

@@ -11,18 +11,19 @@
   display: flex;
   justify-content: space-between;
   align-items: center;
-  background: #0A0A0A;
+  background: var(--nav-bg);
+  color: var(--nav-text);
   padding: 10px 20px;
   position: sticky;
   top: 0;
   z-index: 999;
-  color: #fff;
-  border-bottom: 1px solid #ffffff;
+  border-bottom: 1px solid var(--nav-text);
+  transition: background 0.3s, color 0.3s;
 }
 
 /* Logo */
 .nav-logo a {
-  color: #ffffff;
+  color: var(--nav-text);
   text-decoration: none;
   margin-left: 40px;
   font-size: 1.5rem;
@@ -37,13 +38,13 @@
 }
 
 .nav-links li a {
-  color: #fff;
+  color: var(--nav-text);
   text-decoration: none;
   transition: 0.3s ease;
 }
 
 .nav-links li a:hover {
-  color: #ffffff;
+  color: var(--nav-text);
 }
 
 /* Hamburger (mobile) */
@@ -51,7 +52,7 @@
   display: none;
   font-size: 28px;
   cursor: pointer;
-  color: #ffffff;
+  color: var(--nav-text);
 }
 
 /* Responsive: mobile */
@@ -60,20 +61,20 @@
     display: block;
   }
 
-/* Logo */
-.nav-logo a {
-  color: #ffffff;
-  text-decoration: none;
-  font-size: 1.5rem;
-  margin-left: 45px;
-  font-weight: bold;
-}
+  /* Logo */
+  .nav-logo a {
+    color: var(--nav-text);
+    text-decoration: none;
+    font-size: 1.5rem;
+    margin-left: 45px;
+    font-weight: bold;
+  }
 
   .nav-links {
     position: absolute;
     top: 60px;
     left: 0;
-    background: #000;
+    background: var(--nav-bg);
     width: 100%;
     flex-direction: column;
     align-items: center;
