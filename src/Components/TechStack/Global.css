@@ -572,9 +572,11 @@ body {
   }
   
   .complete-btn {
-    width: 100%;
+    width: 100px;
+    height: 50px;
     margin-right: 0;
-    padding: 12px 20px;
+    font-size: 12px;
+    padding: 0px 20px;
   }
   
   .nav-title {
