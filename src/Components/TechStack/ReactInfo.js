@@ -114,7 +114,7 @@ function ReactInfo() {
             className="complete-btn"
             onClick={() => navigate('/hooks')}
           >
-            Hooks
+            
           </button>
 
           {/* Mark Complete */}
